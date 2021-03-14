@@ -1,4 +1,13 @@
+
+# scss & css
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
+*.css
+
+# js
+*.js.map
+
+# npm itemps
+/node_modules/*
