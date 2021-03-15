@@ -8,6 +8,7 @@
   variables
 */
 $border : #BCBCBC;
+$badgeBlue: #1975d2;
 
 .badgeModal {
   width: 90vw;
@@ -18,12 +19,7 @@ $border : #BCBCBC;
   margin: auto;
 
   @include media-breakpoint-up(lg) {
-    width: 80vw;
-  }
-
-  &-title {
-    border-bottom: 2px solid red;
-    margin-bottom: 30px;
+    width: 60vw;
   }
 
   /* 
@@ -40,7 +36,7 @@ $border : #BCBCBC;
   &-counter {
     background-color: white;
     padding: 5px 20px;
-    margin: 15px 0;
+    margin: 30px 0;
     border-radius: 10%/50%;
     width: fit-content;
     margin-left: 25px;
@@ -73,23 +69,27 @@ $border : #BCBCBC;
     &:nth-child(even) {
       border-right-color: transparent;
     }
-    @include media-breakpoint-up(sm){
+
+    @include media-breakpoint-up(sm) {
       width: 33.333%;
+
       &:nth-child(even) {
         border-right-color: $border;
       }
+
       &:nth-child(3n+3) {
         border-right-color: transparent;
-      }      
+      }
     }
 
     @include media-breakpoint-up(lg) {
-      width: 25%; 
+      width: 25%;
 
       &:nth-child(even),
       &:nth-child(3n+3) {
         border-right-color: $border;
-      } 
+      }
+
       &:nth-child(4n+4) {
         border-right-color: transparent;
       }
@@ -100,27 +100,64 @@ $border : #BCBCBC;
       background: transparent;
       width: 100px;
       height: 100px;
-      border: 2px solid #0F63C2;
+      border: 2px solid $badgeBlue;
       border-radius: 50%;
-      fill: lightgray;
       display: flex;
+      .cls-1 {
+        //fill: lightgray;        
+        fill-opacity: 0;
+      }
 
+      .cls-2 {
+        fill: lightgray;
+      }
+
+      .cls-3 {
+        fill: lightgray;
+      }
+
+      .cls-4 {
+        fill: #E9E7E7;        
+        fill-opacity: 1;
+      }
       svg {
-        width: 80%;
+        width: 100%;
       }
 
       &.on {
-        background-color: #0F63C2;
-        fill: white;
+        background-color: $badgeBlue;
+
+        /*
+          svg fills
+        */
+        .cls-1 {
+          fill: #1975d2;
+          fill-opacity: 1;
+        }
+
+        .cls-2 {
+          fill: #0f63c2;
+        }
+
+        .cls-3 {
+          fill: #fff;
+        }
+
+        .cls-4 {
+          fill: #df562a;
+          fill-opacity: 1;
+        }
       }
-      @include media-breakpoint-up(sm){
+
+      @include media-breakpoint-up(sm) {
         width: 75px;
         height: 75px;
       }
-      @include media-breakpoint-up(xl){
+
+      @include media-breakpoint-up(xl) {
         width: 100px;
         height: 100px;
-      }      
+      }
     }
 
     &__body {
