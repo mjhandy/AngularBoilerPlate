@@ -1,0 +1,53 @@
+.badgeModal {
+  width: 600px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 20px;
+
+  &-title {
+    border-bottom: 2px solid red;
+    margin-bottom: 30px;
+  }
+
+  &-group {
+    background-color: lightgray;
+  }
+
+  &-card {
+    border: none;
+    align-items: center;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &__header {
+      background: transparent;
+      width: 100px;
+      height: 100px;
+      border: 2px solid blue;
+      border-radius: 50%;
+      fill: lightgray;
+      display: flex;
+
+      svg {
+        width: 80%;
+      }
+
+      &.on {
+        background-color: blue;
+        fill: white;
+      }
+    }
+
+    &__body {
+      text-align: center;
+      text-transform: capitalize;
+      padding: 10px 0;
+    }
+
+  }
+}
