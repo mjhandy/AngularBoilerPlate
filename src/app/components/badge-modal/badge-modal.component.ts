@@ -12,9 +12,6 @@ import {MatBadgeModule} from '@angular/material/badge';
 
 export class BadgeModalComponent implements OnInit {
 
-  title = 'Badges'
-
-
 
   
   constructor() { }

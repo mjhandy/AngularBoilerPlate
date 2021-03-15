@@ -9,7 +9,7 @@
 # js
 *.js.map
 
-# npm itemps
-/node_modules/*
+
 
 /dist/*
+node_modules

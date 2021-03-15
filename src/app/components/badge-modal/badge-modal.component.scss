@@ -1,40 +1,104 @@
+/* 
+  Required included
+*/
+@import '~bootstrap/scss/bootstrap';
+
+
+/*
+  variables
+*/
+$border : #BCBCBC;
+
 .badgeModal {
-  width: 600px;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   margin: auto;
 
+  @include media-breakpoint-up(lg) {
+    width: 600px;
+  }
+
   &-title {
     border-bottom: 2px solid red;
     margin-bottom: 30px;
   }
 
+  /* 
+    The body holds the counter and badges
+  */
+  &-body {
+    background-color: #E9E7E7;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  /* Badge counter */
+  &-counter {
+    background-color: white;
+    padding: 5px 20px;
+    margin: 15px 0;
+    border-radius: 10%/50%;
+    width: fit-content;
+    margin-left: 25px;
+
+    &__count,
+    &__total {
+      font-weight: 700;
+    }
+  }
+
+  /* Badge group */
   &-group {
-    background-color: lightgray;
     width: 100%;
     display: flex;
     flex-flow: row wrap;
   }
 
+  /* individual badges */
   &-card {
-    border: none;
+
     align-items: center;
     border-radius: 0;
-    border: none;
+    border-right: 1px solid $border;
     background-color: transparent;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 25%;
+    margin-bottom: 25px;
+    width: 50%;
     display: flex;
     flex-flow: column nowrap;
+
+    &:nth-child(even) {
+      border-right-color: transparent;
+    }
+
+
+    @include media-breakpoint-up(lg) {
+
+      width: 25%;
+      border-right: 1px solid $border;
+
+      &:nth-child(even) {
+        border-right-color: $border;
+      }
+
+      &:nth-child(4n+4) {
+
+        border-right-color: transparent;
+
+      }
+
+    }
 
     &__header {
       background: transparent;
       width: 100px;
       height: 100px;
-      border: 2px solid blue;
+      border: 2px solid #0F63C2;
       border-radius: 50%;
       fill: lightgray;
       display: flex;
@@ -44,7 +108,7 @@
       }
 
       &.on {
-        background-color: blue;
+        background-color: #0F63C2;
         fill: white;
       }
     }
@@ -53,6 +117,12 @@
       text-align: center;
       text-transform: capitalize;
       padding: 10px 0;
+      width: 80%;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #264D58;
+      min-height: 60px;
     }
 
   }
