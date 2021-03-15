@@ -16,7 +16,7 @@ import { BadgeModalComponent } from './components/badge-modal/badge-modal.compon
     HeaderComponent,
     FooterComponent,
     MainNavComponent,
-    BadgeModalComponent
+    BadgeModalComponent,
   ],
   imports: [
     BrowserModule,

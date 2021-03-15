@@ -11,3 +11,5 @@
 
 # npm itemps
 /node_modules/*
+
+/dist/*

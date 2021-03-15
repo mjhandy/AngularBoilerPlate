@@ -1,10 +1,10 @@
 .badgeModal {
   width: 600px;
-  border: 1px solid black;
+
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding: 20px;
+  margin: auto;
 
   &-title {
     border-bottom: 2px solid red;
@@ -13,6 +13,9 @@
 
   &-group {
     background-color: lightgray;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
   }
 
   &-card {
@@ -23,6 +26,9 @@
     background-color: transparent;
     padding-top: 10px;
     padding-bottom: 10px;
+    width: 25%;
+    display: flex;
+    flex-flow: column nowrap;
 
     &__header {
       background: transparent;
