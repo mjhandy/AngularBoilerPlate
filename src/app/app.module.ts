@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BadgeModalComponent } from './components/badge-modal/badge-modal.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 
 
@@ -20,6 +21,7 @@ import { BadgeModalComponent } from './components/badge-modal/badge-modal.compon
     FooterComponent,
     MainNavComponent,
     BadgeModalComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
