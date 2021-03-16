@@ -3,7 +3,6 @@
 */
 @import '~bootstrap/scss/bootstrap';
 
-
 /*
   variables
 */
@@ -38,9 +37,9 @@ $badgeBlue: #1975d2;
     padding: 5px 20px;
     margin: 30px 0;
     border-radius: 10%/50%;
-    width: fit-content;
-    margin-left: 25px;
 
+    margin-left: 25px;
+    display: table; // We use display: table as ie11 does not support fit-content
     &__count,
     &__total {
       font-weight: 700;
@@ -103,19 +102,17 @@ $badgeBlue: #1975d2;
       border: 2px solid $badgeBlue;
       border-radius: 50%;
       display: flex;
-      .cls-1 {
-        //fill: lightgray;        
+
+      /* Fill colours for SVGs */
+      .cls-1 {         
         fill-opacity: 0;
       }
-
       .cls-2 {
         fill: lightgray;
       }
-
       .cls-3 {
         fill: lightgray;
       }
-
       .cls-4 {
         fill: #E9E7E7;        
         fill-opacity: 1;
@@ -126,7 +123,6 @@ $badgeBlue: #1975d2;
 
       &.on {
         background-color: $badgeBlue;
-
         /*
           svg fills
         */
