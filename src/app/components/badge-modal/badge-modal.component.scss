@@ -37,9 +37,10 @@ $badgeBlue: #1975d2;
     padding: 5px 20px;
     margin: 30px 0;
     border-radius: 10%/50%;
-width: fit-content;
+    width: fit-content;
     margin-left: 25px;
     display: table; // We use display: table as ie11 does not support fit-content
+
     &__count,
     &__total {
       font-weight: 700;
@@ -64,11 +65,15 @@ width: fit-content;
     width: 50%;
     display: flex;
     flex-flow: column nowrap;
-
+    // For mobile we only want the border on the odd count
     &:nth-child(even) {
       border-right-color: transparent;
     }
-
+    /*
+      On tablet portait, we adjust the badge width to set up 3 per row, 
+      we also adjust the right border to ensure every 3rd badge doesn't
+      have a border
+    */
     @include media-breakpoint-up(sm) {
       width: 33.333%;
 
@@ -80,7 +85,11 @@ width: fit-content;
         border-right-color: transparent;
       }
     }
-
+    /*
+      On desktop, we adjust the badge width to set up 4 per row, 
+      we also adjust the right border to ensure every 4th badge doesn't
+      have a border
+    */
     @include media-breakpoint-up(lg) {
       width: 25%;
 
@@ -94,7 +103,9 @@ width: fit-content;
       }
 
     }
-
+    /*
+      This holds the SVG and it's background disk
+    */
     &__header {
       background: transparent;
       width: 100px;
@@ -103,48 +114,58 @@ width: fit-content;
       border-radius: 50%;
       display: flex;
 
-      /* Fill colours for SVGs */
-      .cls-1 {         
-        fill-opacity: 0;
+      // Fill colours for SVGs under the off state
+      .cls {
+        &-1 {
+          fill-opacity: 0;
+        }
+
+        &-2 {
+          fill: lightgray;
+        }
+
+        &-3 {
+          fill: lightgray;
+        }
+
+        &-4 {
+          fill: #E9E7E7;
+          fill-opacity: 1;
+        }
       }
-      .cls-2 {
-        fill: lightgray;
-      }
-      .cls-3 {
-        fill: lightgray;
-      }
-      .cls-4 {
-        fill: #E9E7E7;        
-        fill-opacity: 1;
-      }
+
       svg {
         width: 100%;
       }
 
       &.on {
         background-color: $badgeBlue;
-        /*
-          svg fills
-        */
-        .cls-1 {
-          fill: #1975d2;
-          fill-opacity: 1;
+
+        // Fill colours for SVGs under the on state
+        .cls {
+          &-1 {
+            fill: #1975d2;
+            fill-opacity: 1;
+          }
+
+          &-2 {
+            fill: #0f63c2;
+          }
+
+          &-3 {
+            fill: #fff;
+          }
+
+          &-4 {
+            fill: #df562a;
+            fill-opacity: 1;
+          }
         }
 
-        .cls-2 {
-          fill: #0f63c2;
-        }
-
-        .cls-3 {
-          fill: #fff;
-        }
-
-        .cls-4 {
-          fill: #df562a;
-          fill-opacity: 1;
-        }
       }
-
+      /*
+        We adjust the badge width per breakpoint.
+      */
       @include media-breakpoint-up(sm) {
         width: 75px;
         height: 75px;
@@ -155,7 +176,9 @@ width: fit-content;
         height: 100px;
       }
     }
-
+    /*
+      This is the badge title
+    */
     &__body {
       text-align: center;
       text-transform: capitalize;

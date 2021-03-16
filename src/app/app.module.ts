@@ -10,6 +10,9 @@ import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BadgeModalComponent } from './components/badge-modal/badge-modal.component';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
