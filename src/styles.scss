@@ -35,16 +35,16 @@ $ngBoilerPlate-theme: mat-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 /* Bootstrap Overrides */
-@import 'bootstrapOverrides';
+@import '/src/scss/bootstrapOverrides';
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
 
 /* mixins */
-@import 'mixins/mixins';
+@import '/src/scss/mixins/mixins';
 
 /* helper classes */
-@import 'helperClasses';
+@import '/src/scss/helperClasses';
 
 html, body { height: 100%; }
