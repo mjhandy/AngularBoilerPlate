@@ -1,0 +1,9 @@
+{
+  "groups" : {
+    "html-structure" : "HTML Structure",
+    "ng-component" : "Angular Components",
+    "undefined" : "Basic",
+    "helpers" : "Helper Class",
+    "global" : "Global Items"
+  }
+}

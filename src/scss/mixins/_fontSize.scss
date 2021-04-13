@@ -1,3 +1,8 @@
+/// 
+/// Font Size mixin
+/// @author Marh Handy
+/// @group Mixins
+
 // convert to string function
 @function to-string($value) {
   @return inspect($value);
