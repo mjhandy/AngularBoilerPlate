@@ -1,9 +1,15 @@
 {
+  "package": {
+    "title": "Angular Boilerplate",
+    "name": "ngBoilerplate",    
+    "description": "My boilerplate for basic, resuable, Angular components"
+  },  
   "groups" : {
     "html-structure" : "HTML Structure",
     "ng-component" : "Angular Components",
-    "undefined" : "Basic",
-    "helpers" : "Helper Class",
-    "global" : "Global Items"
+    "undefined" : "Group Needed",
+    "helpers" : "Helpers",
+    "global" : "Global Items",
+    "mixins" : "Mixins"
   }
 }

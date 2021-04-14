@@ -1,18 +1,20 @@
 ///
 /// Badges prototype
+///
 /// @author Mark Handy
+/// @name Badges Prototype
+/// @group ng-component
+/// @requires {import} boostrap
+/// 
 
 
-
-/* 
-  Required included
-*/
 @import '~bootstrap/scss/bootstrap';
 
-/*
-  variables
-*/
+/// Badge Border
+/// @type Colour
 $border : #BCBCBC;
+/// Badge Blue
+/// @type Colour
 $badgeBlue: #1975d2;
 
 .badge-modal {
@@ -27,9 +29,7 @@ $badgeBlue: #1975d2;
     width: 60vw;
   }
 
-  /* 
-    The body holds the counter and badges
-  */
+  // The body holds the counter and badges
   &-body {
     background-color: #E9E7E7;
     width: 100%;
@@ -37,7 +37,7 @@ $badgeBlue: #1975d2;
     flex-flow: column nowrap;
   }
 
-  /* Badge counter */
+  //  Badge counter
   &-counter {
     background-color: white;
     padding: 5px 20px;
@@ -53,14 +53,14 @@ $badgeBlue: #1975d2;
     }
   }
 
-  /* Badge group */
+  // Badge group 
   &-group {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
   }
 
-  /* individual badges */
+  // individual badges
   &-card {
 
     align-items: center;

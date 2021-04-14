@@ -1,17 +1,22 @@
-/// 
-/// Font Size mixin
+/// Font Size mixin.
+/// Simplify font customization
+///
 /// @author Marh Handy
-/// @group Mixins
+///
+/// @group helpers
+///
+/// @name Font Size
+///
+/// @param {Int} $size - Font Size
+/// @param {Int} $height - Line Height
+/// @param {Int} $weight [400] - Font Weight
+///
+/// @example scss 
+/// p {
+///    @include font-size(12px, 1.2, 700);
+/// }
 
-// convert to string function
-@function to-string($value) {
-  @return inspect($value);
-}
 
-// pass in any of these formats for either size or height:
-// 11px
-
-// the rest will pass through unchanged
 @mixin font-size($size: $fontSize, $height: $lineHeight, $weight: 400) {
   font-weight: $weight;
   @if str-index(to-string($size), '%') !=null or str-index(to-string($size), 'px') !=null {
@@ -23,4 +28,10 @@
   @else {
     line-height: $height;
   }
+}
+
+
+// convert to string function
+@function to-string($value) {
+  @return inspect($value);
 }

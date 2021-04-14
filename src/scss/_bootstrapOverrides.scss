@@ -1,36 +1,45 @@
-///
+/// 
 /// Boostrap Overrides
 /// 
 /// @author Mark Handy
+/// @group variables
 
 
-// colours
+/// Black
+/// @type Colour
 $black: #000;
+/// @type Colour
 $white: #fff;
+/// @type Colour
 $blue:  #1057A2;
+/// @type Colour
 $red: red;
-
-
+/// @type Colour
 $silver: #cdcdcd;
+/// @type Colour
 $grey :#767676;
+/// @type Colour
 $platinum: #E5E4E2;
-
+/// Default colour for borders
+/// @type Colour
 $borderColour: lighten($grey, 10);
 
-// Grid breakpoints
-//
-// Define the minimum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
+/// Grid breakpoints Updates
+///
+/// @type Breakpoint
 $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1600px);
 
-// Define the maximum width of `.container` for different screen sizes.
+/// Container max widths
+///
+/// @type Container
 $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1400px, xxl: 1440px);
 
-// Spacing
-//
-// Control the default styling of most Bootstrap elements by modifying these
-// variables. Mostly focused on spacing.
-// You can add more entries to the $spacers map, should you need more variation.
+
+/// Control the default styling of most Bootstrap elements by modifying these
+/// variables. Mostly focused on spacing.
+/// You can add more entries to the $spacers map, should you need more variation.
+/// 
+/// @type Variable
 $spacer: 10px;
 $spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
