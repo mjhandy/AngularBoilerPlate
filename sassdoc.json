@@ -1,4 +1,5 @@
 {
+  "basePath": "https://mjhandy.github.io/AngularBoilerPlate/sassdoc/",
   "package": {
     "title": "Angular Boilerplate",
     "name": "ngBoilerplate",    
@@ -7,7 +8,6 @@
   "groups" : {
     "html-structure" : "HTML Structure",
     "ng-component" : "Angular Components",
-    "undefined" : "Group Needed",
     "helpers" : "Helpers",
     "global" : "Global Items",
     "mixins" : "Mixins"

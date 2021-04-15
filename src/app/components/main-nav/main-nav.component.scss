@@ -1,7 +1,20 @@
 /// 
-/// Main Navigation
-/// @author Marh Handy
-/// @group html-structure
-/// @name Main Nav
+/// Main Navigation with theme support
+///
+/// @author Mark Handy
+/// @group ng-component
 
+@import '/src/scss/bootstrapOverrides';
 
+.navbar-nav{
+  .secondary{
+    .nav{
+      &-link{
+        background-color: $blue;
+        color: $white;
+        border-radius: 10px;
+        margin-left: 1px;
+      }
+    }
+  }
+}
