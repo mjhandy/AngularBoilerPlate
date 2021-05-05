@@ -1,0 +1,27 @@
+///
+/// Basic widget component. Similiar to Bootstrap Cards.
+/// 
+/// @author Mark Handy
+///
+/// @group ngcomponent
+///
+/// SCSS Imports
+@import '/src/scss/bootstrapOverrides';
+@import '/src/scss/mixins/mixins';
+
+.widget{
+  display: flex;
+  flex-flow: column nowrap;
+  &-head{
+    color: $white;
+    background-color: $grey;
+    padding: 5px 10px;
+    h3{
+      margin: 0;
+      @include font-size(16px, 1, 700);
+    }
+  }
+  &-body{
+    padding: 5px 10px;
+  }
+}

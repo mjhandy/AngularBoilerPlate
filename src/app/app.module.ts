@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BadgeModalComponent } from './components/badge-modal/badge-modal.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { BasicAccoridionComponent } from './components/basic-accoridion/basic-accoridion.component';
+import { WidgetComponent } from './components/widget/widget.component';
 
 
 
@@ -24,6 +25,7 @@ import { BasicAccoridionComponent } from './components/basic-accoridion/basic-ac
     BadgeModalComponent,
     HomePageComponent,
     BasicAccoridionComponent,
+    WidgetComponent,
   ],
   imports: [
     BrowserModule,
