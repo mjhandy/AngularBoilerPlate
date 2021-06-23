@@ -8,10 +8,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BadgeModalComponent } from './components/badge-modal/badge-modal.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { BasicAccoridionComponent } from './components/basic-accoridion/basic-accoridion.component';
 import { WidgetComponent } from './components/widget/widget.component';
+import { ResponsiveTable } from './components/responsive-table/responsive-table.component';
 
 
 
@@ -22,10 +22,10 @@ import { WidgetComponent } from './components/widget/widget.component';
     HeaderComponent,
     FooterComponent,
     MainNavComponent,
-    BadgeModalComponent,
     HomePageComponent,
     BasicAccoridionComponent,
     WidgetComponent,
+    ResponsiveTable,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+// boostrap includes
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/variables';
+@import '/node_modules/bootstrap/scss/mixins/breakpoints';
+
+.rt{
+  display: table;
+  &-header{
+    display: table-header-group;
+  }
+  &-caption{
+    display: table-caption;
+  }
+  &-row{
+    display: table-row;
+    &:nth-child(2n){
+      background-color: lightgray;
+    }
+  }
+  &-cell{
+    display: table-cell;
+    padding: 5px;
+  }
+  &-footer{
+    display: table-footer-group;
+  }
+}
