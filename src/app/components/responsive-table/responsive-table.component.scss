@@ -3,14 +3,20 @@
 
 .rt{
   display: table;
+  border: 1px solid gray;
+  border-collapse: collapse;
   &-header{
     display: table-header-group;
+    border-bottom: 1px solid gray;
+    font-weight: 700;
+    white-space: nowrap;
   }
   &-caption{
     display: table-caption;
   }
   &-row{
     display: table-row;
+    border-bottom: 1px solid gray;
     &:nth-child(2n){
       background-color: lightgray;
     }
@@ -18,6 +24,16 @@
   &-cell{
     display: table-cell;
     padding: 5px;
+    border-right: 1px solid grey;
+    &:nth-child(1){
+      max-width: 400px;
+    }
+    &:nth-child(2){
+      display: none;
+      @include media-breakpoint-up(lg) {
+        display: table-cell;
+      }
+    }
   }
   &-footer{
     display: table-footer-group;
