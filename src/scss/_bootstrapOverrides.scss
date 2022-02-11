@@ -78,5 +78,11 @@ $font-family-sans-serif:      Roboto, "Helvetica Neue", Arial, "Noto Sans", "Lib
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 
+// tables
+
+$tableBorder: $borderColour;
+$tableCellPadding-x: 5px;
+$tableCellPadding-y: 5px;
+$tableCellPadding: $tableCellPadding-x $tableCellPadding-y; 
 
 /* custom variable values:END */

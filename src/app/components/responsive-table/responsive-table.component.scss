@@ -3,37 +3,40 @@
 
 .rt{
   display: table;
-  border: 1px solid gray;
+  border: 1px solid $tableBorder;
   border-collapse: collapse;
   &-header{
-    display: table-header-group;
-    border-bottom: 1px solid gray;
+    display: none;
+    border-bottom: 1px solid $tableBorder;
     font-weight: 700;
     white-space: nowrap;
+    @include media-breakpoint-up(lg) {
+      display: table-header-group;
+    }
   }
   &-caption{
     display: table-caption;
   }
   &-row{
-    display: table-row;
-    border-bottom: 1px solid gray;
+    display: flex;
+    flex-flow: column nowrap;
+    border-bottom: 1px solid $tableBorder;
     &:nth-child(2n){
       background-color: lightgray;
     }
+    @include media-breakpoint-up(lg) {
+      display: table-row;
+    }    
   }
   &-cell{
     display: table-cell;
-    padding: 5px;
-    border-right: 1px solid grey;
+    padding: $tableCellPadding;    
     &:nth-child(1){
       max-width: 400px;
     }
-    &:nth-child(2){
-      display: none;
-      @include media-breakpoint-up(lg) {
-        display: table-cell;
-      }
-    }
+    @include media-breakpoint-up(lg) {
+      border-right: 1px solid $tableBorder;
+    }    
   }
   &-footer{
     display: table-footer-group;
