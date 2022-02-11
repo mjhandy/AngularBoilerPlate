@@ -6,6 +6,15 @@
 /// @group ngcomponent
 /// 
 
+
+// required includes
+@import '/src/scss/basicBoostrapIncludes';
+
+// component specific includes
+@import '/node_modules/bootstrap/scss/transitions';
+@import '/node_modules/bootstrap/scss/accordion';
+
+
 .basicAccordion{
   padding: 10px;
 }
