@@ -6,10 +6,14 @@
     "description": "My boilerplate for basic, resuable, Angular components"
   },  
   "groups" : {
-    "html-structure" : "HTML Structure",
-    "ngcomponent" : "Angular Components",
-    "helpers" : "Helpers",
-    "global" : "Global Items",
-    "mixins" : "Mixins"
+    "html-structure" :  "HTML Structure",
+    "ngcomponent" :     "Angular Components",
+    "helpers" :         "Helpers",
+    "global" :          "Global Items",
+    "mixins" :          "Mixins",
+    "variable" :        "Variables"
+  },
+  "display": {
+    "watermark":  false
   }
 }

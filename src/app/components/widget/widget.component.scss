@@ -1,13 +1,13 @@
-///
 /// Basic widget component. Similiar to Bootstrap Cards.
 /// 
 /// @author Mark Handy
-///
+/// @name Widget
 /// @group ngcomponent
 ///
-/// SCSS Imports
+
+// SCSS Imports
 @import '/src/scss/bootstrapOverrides';
-@import '/src/scss/mixins/mixins';
+@import '/src/scss/mixins';
 
 .widget{
   display: flex;

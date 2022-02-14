@@ -1,4 +1,4 @@
-/// 
+//// 
 /// Boostrap Overrides
 /// 
 /// @author Mark Handy
@@ -6,35 +6,36 @@
 /// @name Boostrap Variable Overrides
 /// 
 /// @group variables
+////
 
 
 /// Black
-/// @type Colour
+// @type Colour
 $black: #000;
-/// @type Colour
+// @type Colour
 $white: #fff;
-/// @type Colour
+// @type Colour
 $blue:  #1057A2;
-/// @type Colour
+// @type Colour
 $red: red;
-/// @type Colour
+// @type Colour
 $silver: #cdcdcd;
-/// @type Colour
+// @type Colour
 $grey :#767676;
-/// @type Colour
+// @type Colour
 $platinum: #E5E4E2;
 /// Default colour for borders
-/// @type Colour
+// @type Colour
 $borderColour: lighten($grey, 10);
 
 /// Grid breakpoints Updates
 ///
-/// @type Breakpoint
+// @type Breakpoint
 $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1600px);
 
 /// Container max widths
 ///
-/// @type Container
+// @type Container
 $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1400px, xxl: 1440px);
 
 
@@ -42,7 +43,7 @@ $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1400px, xxl: 1440px
 /// variables. Mostly focused on spacing.
 /// You can add more entries to the $spacers map, should you need more variation.
 /// 
-/// @type Variable
+// @type Variable
 $spacer: 10px;
 $spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -68,9 +69,11 @@ $sizes: map-merge((
 $sizes);
 
 
-// Typography
-//
-// Font, line-height, and color for body text, headings, and more.
+/// Typography
+///
+/// Font, line-height, and color for body text, headings, and more.
+/// 
+// @type: Font Family
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
@@ -78,7 +81,9 @@ $font-family-sans-serif:      Roboto, "Helvetica Neue", Arial, "Noto Sans", "Lib
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 
-// tables
+/// Ttables
+///
+// @type Tables
 
 $tableBorder: $borderColour;
 $tableCellPadding-x: 5px;
