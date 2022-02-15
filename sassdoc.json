@@ -6,14 +6,17 @@
     "description": "My boilerplate for basic, resuable, Angular components"
   },  
   "groups" : {
-    "html-structure" :  "HTML Structure",
+    "structure" :       "Structure",
     "ngcomponent" :     "Angular Components",
     "helpers" :         "Helpers",
     "global" :          "Global Items",
-    "mixins" :          "Mixins",
-    "variable" :        "Variables"
+    "mixins" :          "Mixins"
   },
-  "display": {
-    "watermark":  false
+  "options": {
+    "dest": "./sassdoc",
+    "display": {
+      "watermark":  false
+    }
   }
+
 }

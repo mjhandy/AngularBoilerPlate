@@ -1,9 +1,11 @@
-/// Font Size mixin.
-/// Simplify font customization
-///
+////
 /// @author Mark Handy
-///
 /// @group helpers
+//// 
+
+
+/// Font Size mixin.
+/// Simplify font size, line height, weight, and letter spacing
 ///
 /// @name Font Size
 ///
@@ -12,9 +14,13 @@
 /// @param {Int} $weight [400] - Font Weight
 /// @param {Int} $letterSpacing [normal] - Letter Spacing
 ///
-/// @example scss 
+/// @example scss - all options
 /// p {
 ///    @include font-size(12px, 1.2, 700, 1px);
+/// }
+/// @example scss - just size, lineheight, and weight
+/// p {
+///    @include font-size(12px, 1.2, 700);
 /// }
 
 
