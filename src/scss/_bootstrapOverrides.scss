@@ -1,46 +1,44 @@
-/// Boostrap Overrides
-/// 
+//// 
 /// @author Mark Handy
-/// @name Variables
+////
+
+/// Bootstrap variable overrides
 
 /// Black
-// @type Colour
+/// @type Colour
 $black: #000;
-// @type Colour
+/// White
+/// @type Colour
 $white: #fff;
-// @type Colour
+/// @type Colour
 $blue:  #1057A2;
-// @type Colour
+/// @type Colour
 $red: red;
-// @type Colour
+/// @type Colour
 $silver: #cdcdcd;
-// @type Colour
+/// @type Colour
 $grey :#767676;
-// @type Colour
+/// @type Colour
 $platinum: #E5E4E2;
-/// Default colour for borders
-// @type Colour
+// Default colour for borders
+/// @type Variable
 $borderColour: lighten($grey, 10);
 
-/// Grid breakpoints Updates
+// Grid breakpoints Updates
 ///
-// @type Breakpoint
+/// @type Layout
 $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1600px);
 
 /// Container max widths
 ///
-// @type Container
+/// @type Layout
 $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1400px, xxl: 1440px);
 
 
-/// Control the default styling of most Bootstrap elements by modifying these
-/// variables. Mostly focused on spacing.
-/// You can add more entries to the $spacers map, should you need more variation.
-/// 
-// @type Variable
+/// default Space size
 $spacer: 10px;
 $spacers: ();
-// stylelint-disable-next-line scss/dollar-variable-default
+/// Updated to the Bootstrap space map-merge
 $spacers: map-merge((0: 0,
         1: ($spacer * 0.5), // 5px
         2: $spacer, // 10px
@@ -62,26 +60,21 @@ $sizes: map-merge((
     auto: auto), 
 $sizes);
 
+/// @type Font-Family
 
-/// Typography
-///
-/// Font, line-height, and color for body text, headings, and more.
-/// 
-// @type: Font Family
-
-// scss-docs-start font-variables
-// stylelint-disable value-keyword-case
 $font-family-sans-serif:      Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+/// @type Font-Family
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 
-/// Tables
-///
-// @type Tables
-
+/// Table Border
 $tableBorder: $borderColour;
+/// Cell Padding, left and right
 $tableCellPadding-x: 5px;
+/// Cell Padding, top and bottom
 $tableCellPadding-y: 5px;
+/// Cell Padding, top, right, bottom, left
 $tableCellPadding: $tableCellPadding-x $tableCellPadding-y; 
 
 /* custom variable values:END */
