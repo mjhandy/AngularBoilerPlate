@@ -1,15 +1,16 @@
-/// This is the basic accordion, based on the Bootstrap 4 Accordion
-/// 
+//// 
 /// @author Mark Handy
 /// @name Accordion
-/// @group ngcomponent
-/// 
+/// @group component
+////
+
+///  This is the basic accordion, based on the Bootstrap 5 Accordion
 
 
-// required includes
+/// required includes
 @import '/src/scss/basicBoostrapIncludes';
 
-// component specific includes
+/// component specific includes
 @import '/node_modules/bootstrap/scss/transitions';
 @import '/node_modules/bootstrap/scss/accordion';
 

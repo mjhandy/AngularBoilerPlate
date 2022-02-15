@@ -7,7 +7,7 @@
   },  
   "groups" : {
     "structure" :       "Structure",
-    "ngcomponent" :     "Angular Components",
+    "component" :       "Component",
     "helpers" :         "Helpers",
     "global" :          "Global Items",
     "mixins" :          "Mixins"
