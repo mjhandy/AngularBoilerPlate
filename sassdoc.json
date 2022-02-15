@@ -5,6 +5,7 @@
     "name": "ngBoilerplate",    
     "description": "My boilerplate for basic, resuable, Angular components"
   },  
+  "dest": "./docs/sassdoc",
   "groups" : {
     "structure" :       "Structure",
     "component" :       "Component",
@@ -13,7 +14,6 @@
     "mixins" :          "Mixins"
   },
   "options": {
-    "dest": "./sassdoc",
     "display": {
       "watermark":  false
     }
