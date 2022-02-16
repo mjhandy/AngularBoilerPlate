@@ -1,44 +1,36 @@
 //// 
 /// @author Mark Handy
+/// @group bs
 ////
 
 /// Bootstrap variable overrides
 
-/// Black
-/// @type Colour
-$black: #000;
-/// White
-/// @type Colour
-$white: #fff;
-/// @type Colour
-$blue:  #1057A2;
-/// @type Colour
-$red: red;
-/// @type Colour
-$silver: #cdcdcd;
-/// @type Colour
-$grey :#767676;
-/// @type Colour
-$platinum: #E5E4E2;
-// Default colour for borders
-/// @type Variable
-$borderColour: lighten($grey, 10);
-
-// Grid breakpoints Updates
-///
-/// @type Layout
-$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1600px);
+/// Grid breakpoints Updates
+/// @type Map
+$grid-breakpoints: (
+    xs:     0, 
+    sm:     576px, 
+    md:     768px, 
+    lg:     992px, 
+    xl:     1200px, 
+    xxl:    1440px, 
+    xxxl:   1600px);
 
 /// Container max widths
-///
-/// @type Layout
-$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1400px, xxl: 1440px);
+/// @type Map
+$container-max-widths: (
+    sm:     540px, 
+    md:     720px, 
+    lg:     960px, 
+    xl:     1400px, 
+    xxl:    1440px);
 
 
 /// default Space size
 $spacer: 10px;
 $spacers: ();
 /// Updated to the Bootstrap space map-merge
+/// @type Map
 $spacers: map-merge((0: 0,
         1: ($spacer * 0.5), // 5px
         2: $spacer, // 10px
@@ -50,7 +42,7 @@ $spacers: map-merge((0: 0,
 // This variable affects the `.h-*` and `.w-*` classes.
 
 $sizes: ();
-// stylelint-disable-next-line scss/dollar-variable-default
+/// @type Map
 $sizes: map-merge((
     25: 25%, 
     33: 33%, 

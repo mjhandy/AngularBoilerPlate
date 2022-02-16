@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "sassdoc": "sassdoc ./src/**/* -c sassdoc.json",
+    "sassdoc": "sassdoc ./src/scss/**/*.scss -c sassdoc.json",
     "sassgh": "sassdocify './src/**/*.scss' -c sassdoc.json"
   },
   "private": true,

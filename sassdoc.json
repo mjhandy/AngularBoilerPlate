@@ -7,11 +7,9 @@
   },  
   "dest": "./docs/sassdoc",
   "groups" : {
-    "structure" :       "Structure",
-    "component" :       "Component",
-    "helpers" :         "Helpers",
-    "global" :          "Global Items",
-    "mixins" :          "Mixins"
+    "helpers" :         "Helper Classes",
+    "var":              "Variabled",
+    "bs":               "Bootstrap Overrides"
   },
   "options": {
     "display": {
