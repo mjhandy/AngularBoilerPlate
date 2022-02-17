@@ -11,10 +11,9 @@
     "var":              "Variabled",
     "bs":               "Bootstrap Overrides"
   },
-  "options": {
-    "display": {
-      "watermark":  false
-    }
+  "display": {
+    "access": ["public"],
+    "watermark":  false
   }
 
 }

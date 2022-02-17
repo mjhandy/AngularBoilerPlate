@@ -17,9 +17,9 @@
   border-collapse: collapse;
   &-header{
     display: none;
-    border-bottom: 1px solid $tableBorder;
-    font-weight: 700;
+    border-bottom: 1px solid $tableBorder;    
     white-space: nowrap;
+    padding: 0;
     @include media-breakpoint-up(lg) {
       display: table-header-group;
     }
@@ -46,9 +46,29 @@
     }
     @include media-breakpoint-up(lg) {
       border-right: 1px solid $tableBorder;
+    }
+    // remove padding from header row cells as we'll use buttons
+    .rt-header &{
+      padding: 0;
     }    
   }
   &-footer{
     display: table-footer-group;
+  }
+  // header buttons
+  .btn-header{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    
+    padding: 10px 5px;
+    .copy{
+      font-weight: 700;
+    }
+    .icon{
+      
+    }
   }
 }

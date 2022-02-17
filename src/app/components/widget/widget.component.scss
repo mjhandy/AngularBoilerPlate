@@ -5,8 +5,10 @@
 /// @group component
 ///
 
+// required includes
+@import '/src/scss/basicBoostrapIncludes';
+
 // SCSS Imports
-@import '/src/scss/bootstrapOverrides';
 @import '/src/scss/mixins';
 
 .widget{
