@@ -6,16 +6,25 @@
 ///
 
 // required includes
-@import '/src/scss/bootstrapOverrides';
+@import './../../../scss/basicBoostrapIncludes';
 
-.navbar-nav{
-  .secondary{
-    .nav{
-      &-link{
-        background-color: $blue;
-        color: $white;
-        border-radius: 10px;
-        margin-left: 1px;
+.navbar{
+  &.nav-1{
+    height: 200px;
+    box-shadow: 0 -50px 0 0 lightgray inset;
+  }
+  &-nav{
+    &.primary{
+      background-color: darkseagreen;
+    }
+    &.secondary{
+      .nav{
+        &-link{
+          background-color: $blue;
+          color: $white;
+          border-radius: 10px;
+          margin-left: 1px;
+        }
       }
     }
   }
