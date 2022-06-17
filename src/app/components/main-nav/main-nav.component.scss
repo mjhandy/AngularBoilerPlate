@@ -9,15 +9,28 @@
 @import './../../../scss/basicBoostrapIncludes';
 
 .navbar{
+  padding: 0;
   &.nav-1{
-    height: 200px;
-    box-shadow: 0 -50px 0 0 lightgray inset;
+    @include media-breakpoint-up(lg){
+      height: 150px;
+      box-shadow: 0 -50px 0 0 lightgray inset;
+      margin: 0 -15px;
+      padding: 0 15px;
+    }
+    [class$='collapse']{
+      @include media-breakpoint-up(lg){
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
   &-nav{
     &.primary{
       background-color: darkseagreen;
+      align-self: flex-end;
     }
     &.secondary{
+     align-self: flex-start; 
       .nav{
         &-link{
           background-color: $blue;
