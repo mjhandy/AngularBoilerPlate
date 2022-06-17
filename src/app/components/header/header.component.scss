@@ -4,7 +4,26 @@
 /// @name Site Header
 /// @group structure
 ///
+/// 
+/// required includes
+@import './../../../scss/basicBoostrapIncludes';
 
 header{
-  background-color: #fff;
+  background-color: $white;
+  &.header{
+    &-one{
+      @include media-breakpoint-up(lg){
+        height: 150px;
+        box-shadow: 0 -50px 0 0 lightgray inset;
+        margin: 0 -15px;
+        padding: 0 15px;
+      }
+      [class$='collapse']{
+        @include media-breakpoint-up(lg){
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
 }

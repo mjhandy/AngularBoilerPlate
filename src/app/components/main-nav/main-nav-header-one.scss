@@ -1,0 +1,32 @@
+/// Main Navigation with theme support
+///
+/// @author Mark Handy
+/// @name Main Navigation - Header One
+/// @group component
+///
+
+// required includes
+@import './../../../scss/basicBoostrapIncludes';
+
+.header-one{
+  .navbar{
+    padding: 0;
+    &-nav{
+      &.primary{
+        background-color: darkseagreen;
+        align-self: flex-end;
+      }
+      &.secondary{
+       align-self: flex-start; 
+        .nav{
+          &-link{
+            background-color: $blue;
+            color: $white;
+            border-radius: 10px;
+            margin-left: 1px;
+          }
+        }
+      }
+    }
+  }
+}
