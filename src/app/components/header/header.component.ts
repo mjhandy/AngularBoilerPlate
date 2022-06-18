@@ -10,9 +10,15 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   theme: string;
+  height: string;
 
   ngOnInit(): void {
     this.theme = 'header-one'
+
+    // set height
+    if (this.theme === 'header-one'){
+      this.height === '150px';
+    }
   }
 
 }

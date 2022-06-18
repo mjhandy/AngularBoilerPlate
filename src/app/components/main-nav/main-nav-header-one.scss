@@ -8,22 +8,30 @@
 // required includes
 @import './../../../scss/basicBoostrapIncludes';
 
-.header-one{
-  .navbar{
+.header-one {
+
+  .navbar {
     padding: 0;
-    &-nav{
-      &.primary{
-        background-color: darkseagreen;
-        align-self: flex-end;
+
+    &-nav {
+      &.primary {
+        @include media-breakpoint-up(lg) {
+          background-color: darkseagreen;
+          align-self: flex-end;
+        }
       }
-      &.secondary{
-       align-self: flex-start; 
-        .nav{
-          &-link{
-            background-color: $blue;
-            color: $white;
-            border-radius: 10px;
-            margin-left: 1px;
+
+      &.secondary {
+        align-self: flex-start;
+
+        .nav {
+          &-link {
+            @include media-breakpoint-up(lg) {
+              background-color: $blue;
+              color: $white;
+              border-radius: 10px;
+              margin-left: 1px;
+            }
           }
         }
       }

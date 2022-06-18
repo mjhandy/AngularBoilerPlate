@@ -1,4 +1,4 @@
-<nav class='navbar navbar-expand-lg p-0 h-100'>
+<nav class='navbar navbar-expand-lg p-0' ngClass="{{ theme }}" role="navigation">
   <a routerLink="" reouterLinkActive="active" class="navbar-brand">Home</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,7 +8,7 @@
   <div id="mainNav" class="collapse navbar-collapse ">
 
     <ul class="navbar-nav primary">
-      <li class="nav-item"><a routerLink='basic-accordion' routerLinkActive='active' class="nav-link">Basic Accordion</a></li>
+      <li class="nav-item"><a routerLink='basic-accordion' routerLinkActive='active' aria-current="page" class="nav-link active">Basic Accordion</a></li>
       <li class='nav-item'><a routerLink='response-table' class='nav-link'>Responsive Table</a></li>     
     </ul>
 
@@ -19,4 +19,3 @@
     </ul>
   </div>
 </nav>
-
