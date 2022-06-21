@@ -7,6 +7,7 @@ import { ThrowStatement } from 'typescript';
   styleUrls: [
     './main-nav.component.scss',
     './main-nav-header-one.scss',
+    './main-nav-header-two.scss',
   ]  
 })
 export class MainNavComponent implements OnInit {

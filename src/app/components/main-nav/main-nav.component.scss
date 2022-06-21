@@ -7,3 +7,13 @@
 
 // required includes
 @import './../../../scss/basicBoostrapIncludes';
+
+.navbar{
+  &.header{
+    &-two{
+      @include media-breakpoint-up(lg) {
+      flex-direction: column;
+      }
+    }
+  }
+}

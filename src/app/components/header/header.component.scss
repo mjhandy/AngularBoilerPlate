@@ -13,7 +13,6 @@ header{
   &.header{
     &-one{
       @include media-breakpoint-up(lg){
-        // height: 150px;
         box-shadow: 0 -40px 0 0 lightgray inset;
       }
       [class$='collapse']{
@@ -23,5 +22,16 @@ header{
         }
       }
     }
+    &-two{
+      @include media-breakpoint-up(lg){
+        box-shadow: 0 -40px 0 0 lightgray inset;
+      }
+      [class$='collapse']{
+        @include media-breakpoint-up(lg){
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }    
   }
 }
