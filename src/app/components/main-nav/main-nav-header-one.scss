@@ -12,18 +12,21 @@
 
   .navbar {
     padding: 0;
-
+    &-brand{
+      align-self: flex-start;
+    }
     &-nav {
       &.primary {
         @include media-breakpoint-up(lg) {
-          background-color: darkseagreen;
-          align-self: flex-end;
+          margin-top: 150px;             
+          flex-grow: 1;
+          justify-content: center;
         }
       }
 
       &.secondary {
         align-self: flex-start;
-
+        margin: 10px 0 0;
         .nav {
           &-link {
             @include media-breakpoint-up(lg) {
@@ -31,6 +34,8 @@
               color: $white;
               border-radius: 10px;
               margin-left: 1px;
+              padding-left: 10px;
+              padding-right: 10px;
             }
           }
         }
