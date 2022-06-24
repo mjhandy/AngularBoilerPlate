@@ -8,6 +8,7 @@ import { ThrowStatement } from 'typescript';
     './main-nav.component.scss',
     './main-nav-header-one.scss',
     './main-nav-header-two.scss',
+    './main-nav-header-three.scss',
   ]  
 })
 export class MainNavComponent implements OnInit {

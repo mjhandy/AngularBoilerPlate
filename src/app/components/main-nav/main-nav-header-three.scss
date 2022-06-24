@@ -1,0 +1,44 @@
+/// Main Navigation with theme support
+///
+/// @author Mark Handy
+/// @name Main Navigation - Header One
+/// @group component
+///
+
+// required includes
+@import "./../../../scss/basicBoostrapIncludes";
+
+.header-three {
+  .navbar {
+    &-brand {
+      align-self: center;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 50px;
+      }
+    }
+
+    &-collapse {
+      @include media-breakpoint-up(lg) {
+        justify-content: flex-end;
+      }
+
+    }
+
+    &-nav {
+      &.primary {}
+
+      &.secondary {
+        .nav {
+          &-link {
+            @include media-breakpoint-up(lg) {
+              background-color: $blue;
+              color: $white;
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

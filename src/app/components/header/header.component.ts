@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   height: string;
 
   ngOnInit(): void {
-    this.theme = 'header-two' 
+    this.theme = 'header-three' 
   }
 
 }
