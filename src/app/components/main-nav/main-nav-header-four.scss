@@ -10,13 +10,7 @@
 
 .header-four {
   .navbar {
-    padding: 0;
-    &-expanded-lg{
-      @include media-breakpoint-up(md) {
-        flex-flow: column wrap;
-        justify-content: center;
-      }
-    }
+    // logoß
     &-brand{
       @include media-breakpoint-up(lg) {
         align-self: center;
@@ -24,15 +18,23 @@
         padding: 0;
       }
     }
+    &-collapse{
+      @include media-breakpoint-up(lg){
+        flex-flow: column;
+        align-items: flex-end;
+      }
+    }
     &-nav {
       &.primary {
         @include media-breakpoint-up(lg) {
-
+          order: 2;
         }
       }
 
       &.secondary {
-
+        @include media-breakpoint-up(lg) {
+          order: 1;
+        }
         .nav {
           &-link {
             @include media-breakpoint-up(lg) {
