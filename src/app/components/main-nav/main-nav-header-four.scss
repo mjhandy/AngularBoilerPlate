@@ -9,24 +9,30 @@
 @import './../../../scss/basicBoostrapIncludes';
 
 .header-four {
-
   .navbar {
     padding: 0;
+    &-expanded-lg{
+      @include media-breakpoint-up(md) {
+        flex-flow: column wrap;
+        justify-content: center;
+      }
+    }
     &-brand{
-      align-self: flex-start;
+      @include media-breakpoint-up(lg) {
+        align-self: center;
+        margin: 0;
+        padding: 0;
+      }
     }
     &-nav {
       &.primary {
         @include media-breakpoint-up(lg) {
-          margin-top: 150px;             
-          flex-grow: 1;
-          justify-content: center;
+
         }
       }
 
       &.secondary {
-        align-self: flex-start;
-        margin: 10px 0 0;
+
         .nav {
           &-link {
             @include media-breakpoint-up(lg) {
