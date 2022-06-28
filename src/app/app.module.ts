@@ -14,7 +14,7 @@ import { WidgetComponent } from './components/widget/widget.component';
 import { ResponsiveTable } from './components/responsive-table/responsive-table.component';
 import { MatTabsComponent } from './components/mat-tabs/mat-tabs.component';
 
-import { MaterialDesignModule } from './components/material-design/material-design.module';
+
 
 @NgModule({
   declarations: [
