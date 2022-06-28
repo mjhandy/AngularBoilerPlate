@@ -14,6 +14,8 @@ import { WidgetComponent } from './components/widget/widget.component';
 import { ResponsiveTable } from './components/responsive-table/responsive-table.component';
 import { MatTabsComponent } from './components/mat-tabs/mat-tabs.component';
 
+import { MaterialDesignModule } from './components/material-design/material-design.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,7 @@ import { MatTabsComponent } from './components/mat-tabs/mat-tabs.component';
   imports: [
     BrowserModule,
     AppRoutingModule,    
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
