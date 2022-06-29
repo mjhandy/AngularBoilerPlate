@@ -9,15 +9,53 @@
 @import './../../../../scss/basicBoostrapIncludes';
 
 
+// variables
+$tab-border-thickness: 2px;
+$tab-border-radius: 20px;
+
+
 
 .leaderboard{
   .mat{
     &-tab-header{
-
+      border-bottom: 0;
+      &-pagination{
+        min-width: 30px;
+        &-before{          
+          justify-content: left;          
+        }
+        &-after{          
+          justify-content: right;          
+        }        
+      }
     }
     &-tab-label{
-      border-top: 1px solid red;
-      border-bottom: 1px solid red;
+      border-top: $tab-border-thickness solid red;
+      border-bottom: $tab-border-thickness solid red;
+      opacity: 1;
+      height: unset;
+      padding: 5px 10px;
+      font-weight: 700;
+      transition: all 500ms ease-in-out;
+      flex-grow: 1;
+      &:first-child{
+        border-left: $tab-border-thickness solid red;
+        border-top-left-radius: $tab-border-radius;
+        border-bottom-left-radius: $tab-border-radius;
+      }
+      &:last-child{
+        border-right: $tab-border-thickness solid red;
+        border-top-right-radius: $tab-border-radius;
+        border-bottom-right-radius: $tab-border-radius;
+      }
+      &-active,
+      &-hover{
+        background-color: red;
+        color: #fff;
+      }      
+    }
+    &-ink-bar{
+      display: none
     }
   }
 }

@@ -5,19 +5,27 @@
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="col col-lg-6">
-      <mat-tab-group class="leaderboard">
-        <mat-tab class='leaderboard-tab' label="Top Fundraisers">
-          <h2>Top Fundraisers</h2>
+    <div class="col col-lg-8">
+      <mat-tab-group class="leaderboard" dynamicHeight mat-align-tabs="center" animationDuration="0">
+        <mat-tab label="Top Fundraisers">
+          <ng-template matTabContent>
+            <h2>Top Fundraisers</h2>
+          </ng-template>          
         </mat-tab>
-        <mat-tab class='leaderboard-tab' label="Top Teams">
-          <h2>Top Teams</h2>
+        <mat-tab label="Top Teams">
+          <ng-template matTabContent>
+            <h2>Top Teams</h2>
+          </ng-template>          
         </mat-tab>
-        <mat-tab class='leaderboard-tab' label="Top Donors">
-          <h2>Top Donors</h2>
+        <mat-tab label="Top Donors">
+          <ng-template matTabContent>
+            <h2>Top Donors</h2>
+          </ng-template>          
         </mat-tab>
-        <mat-tab class='leaderboard-tab' label="Top Cities">
-          <h2>Top Cities</h2>
+        <mat-tab label="Top Cities">
+          <ng-template matTabContent>
+            <h2>Top Cities</h2>
+          </ng-template>          
         </mat-tab>
       </mat-tab-group>
     </div>
