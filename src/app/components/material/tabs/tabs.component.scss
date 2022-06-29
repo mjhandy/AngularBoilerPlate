@@ -10,17 +10,25 @@
 
 
 // variables
-$tab-border-thickness: 2px;
+$tab-border-width-mobile: 1px;
+$tab-border-width-desktop: 2px;
 $tab-border-radius: 20px;
-
-
+$tab-color: #DB3A00;
 
 .leaderboard{
   .mat{
     &-tab-header{
       border-bottom: 0;
       &-pagination{
-        min-width: 30px;
+        min-width: 25px;
+        &-chevron{
+          border-color: $tab-color;
+          height: 10px;
+          width: 10px;
+        }
+        &-disabled{
+          opacity: .5;
+        }
         &-before{          
           justify-content: left;          
         }
@@ -30,32 +38,56 @@ $tab-border-radius: 20px;
       }
     }
     &-tab-label{
-      border-top: $tab-border-thickness solid red;
-      border-bottom: $tab-border-thickness solid red;
+      border-top: $tab-border-width-mobile solid $tab-color;
+      border-bottom: $tab-border-width-mobile solid $tab-color;
+      @include media-breakpoint-up(lg) {
+        border-top-width: $tab-border-width-desktop;
+        border-bottom-width: $tab-border-width-desktop;
+      }      
       opacity: 1;
       height: unset;
-      padding: 5px 10px;
-      font-weight: 700;
+      padding: 10px 10px;      
       transition: all 500ms ease-in-out;
-      flex-grow: 1;
+      flex-grow: 1;      
       &:first-child{
-        border-left: $tab-border-thickness solid red;
-        border-top-left-radius: $tab-border-radius;
-        border-bottom-left-radius: $tab-border-radius;
+        border-left: $tab-border-width-mobile solid $tab-color;
+        @include media-breakpoint-up(lg) {
+          border-left-width: $tab-border-width-desktop;
+          border-top-left-radius: $tab-border-radius;
+          border-bottom-left-radius: $tab-border-radius;
+        }
       }
       &:last-child{
-        border-right: $tab-border-thickness solid red;
-        border-top-right-radius: $tab-border-radius;
-        border-bottom-right-radius: $tab-border-radius;
+        border-right: $tab-border-width-mobile solid $tab-color;
+        @include media-breakpoint-up(lg) {
+          border-right-width: $tab-border-width-desktop;
+          border-top-right-radius: $tab-border-radius;
+          border-bottom-right-radius: $tab-border-radius;
+        }
+      }
+      &:not(:first-child),
+      &:not(:last-child){
+        border-right: $tab-border-width-mobile solid $tab-color;
+      }
+      &-content{
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1;
       }
       &-active,
       &-hover{
-        background-color: red;
+        background-color: $tab-color;
         color: #fff;
       }      
     }
     &-ink-bar{
       display: none
+    }
+    &-tab-body{
+      margin: 20px 40px 0 40px;
+      @include media-breakpoint-up(lg) {
+        margin: 20px 20px 0 20px;
+      }
     }
   }
 }
