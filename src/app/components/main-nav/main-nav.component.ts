@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ThrowStatement } from 'typescript';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-main-nav',
@@ -10,7 +9,8 @@ import { ThrowStatement } from 'typescript';
     './main-nav-header-two.scss',
     './main-nav-header-three.scss',
     './main-nav-header-four.scss',
-  ]  
+  ],
+  encapsulation: ViewEncapsulation.None 
 })
 export class MainNavComponent implements OnInit {
 
