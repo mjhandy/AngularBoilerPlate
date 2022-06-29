@@ -1,0 +1,23 @@
+/// Main Navigation with theme support
+///
+/// @author Mark Handy
+/// @name Material Tabs
+/// @group component
+///
+
+// required includes
+@import './../../../../scss/basicBoostrapIncludes';
+
+
+
+.leaderboard{
+  .mat{
+    &-tab-header{
+
+    }
+    &-tab-label{
+      border-top: 1px solid red;
+      border-bottom: 1px solid red;
+    }
+  }
+}
