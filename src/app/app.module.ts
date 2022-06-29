@@ -12,6 +12,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { BasicAccoridionComponent } from './components/basic-accoridion/basic-accoridion.component';
 import { WidgetComponent } from './components/widget/widget.component';
 import { ResponsiveTable } from './components/responsive-table/responsive-table.component';
+import { TabsComponent } from './components/material/tabs/tabs.component';
 
 
 
@@ -26,6 +27,7 @@ import { ResponsiveTable } from './components/responsive-table/responsive-table.
     BasicAccoridionComponent,
     WidgetComponent,
     ResponsiveTable,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
