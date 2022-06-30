@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row title">
+    <div class="col-12">
+      <h1>Slick Carousel Leaderboard</h1>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col col-lg-8">
+      <div class="slick-buttons">
+        <button mat-button-flat class="btn" (click)="slickModal.slickGoTo(1)">Top Fundraisers</button>
+        <button mat-button-flat class="btn" (click)="slickModal.slickGoTo(2)">Top Teams</button>
+        <button mat-button-flat class="btn" (click)="slickModal.slickGoTo(3)">Top Donors</button>
+        <button mat-button-flat class="btn" (click)="slickModal.slickGoTo(4)">Top Cities</button>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col col-lg-8">
+      <ngx-slick-carousel
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="slideConfig"
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem class="slide">
+          <h2>Top Fundraisers</h2>
+        </div>
+        <div ngxSlickItem class="slide">
+          <h2>Top Teams</h2>
+        </div>
+        <div ngxSlickItem class="slide">
+          <h2>Top Donors</h2>
+        </div>
+        <div ngxSlickItem class="slide">
+          <h2>Top Cities</h2>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </div>
+</div>

@@ -15,6 +15,8 @@ import { ResponsiveTable } from './components/responsive-table/responsive-table.
 import { TabsComponent } from './components/material/tabs/tabs.component';
 
 import { MaterialDesignModule } from './components/material-design/material-design.module';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { SlickCarouselComponent } from './components/slick-carousel/slick-carousel/slick-carousel.component';
 
 
 @NgModule({
@@ -28,12 +30,14 @@ import { MaterialDesignModule } from './components/material-design/material-desi
     WidgetComponent,
     ResponsiveTable,
     TabsComponent,
+    SlickCarouselComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,    
     BrowserAnimationsModule,
-    MaterialDesignModule
+    MaterialDesignModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

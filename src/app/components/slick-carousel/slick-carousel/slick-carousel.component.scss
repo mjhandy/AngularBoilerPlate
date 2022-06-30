@@ -1,0 +1,60 @@
+/// Main Navigation with theme support
+///
+/// @author Mark Handy
+/// @name Slick Slider
+/// @group component
+///
+
+// required includes
+@import "./../../../../scss/basicBoostrapIncludes";
+// slick scss
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+// variables
+$button-border-width-mobile: 1px;
+$button-border-width-desktop: 2px;
+$button-border-radius: 20px;
+$button-color: #db3a00;
+
+.slick {
+  &-buttons {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+    .btn {
+      flex-grow: 1;
+      background-color: transparent;
+      color: $black;
+      border-top: $button-border-width-desktop solid $button-color;
+      border-bottom: $button-border-width-desktop solid $button-color;
+      border-left-width: 0;
+      border-right: 0;
+      padding: 10px 10px;
+      transition: all 500ms ease-in-out;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1;
+
+      &:not(:first-child),
+      &:not(:last-child) {
+        border-right: $button-border-width-desktop solid $button-color;
+      }
+
+      &:first-child {
+        border-left-color: $button-color;
+        border-left-width: $button-border-width-desktop;
+        border-top-left-radius: $button-border-radius;
+        border-bottom-left-radius: $button-border-radius;
+      }
+
+      &:last-child {
+        border-right-color: $button-color;
+        border-right-width: $button-border-width-desktop;
+        border-top-right-radius: $button-border-radius;
+        border-bottom-right-radius: $button-border-radius;
+      }
+
+    }
+  }
+}
