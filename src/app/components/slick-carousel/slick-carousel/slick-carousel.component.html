@@ -7,10 +7,10 @@
   <div class="row justify-content-center">
     <div class="col col-lg-8">
       <div class="slick-buttons">
-        <button mat-button-flat class="btn" (click)="slickModal.slickGoTo(1)">Top Fundraisers</button>
-        <button mat-button-flat class="btn" (click)="slickModal.slickGoTo(2)">Top Teams</button>
-        <button mat-button-flat class="btn" (click)="slickModal.slickGoTo(3)">Top Donors</button>
-        <button mat-button-flat class="btn" (click)="slickModal.slickGoTo(4)">Top Cities</button>
+        <button class="btn active" role="button" [class.active]="slidecount === 0" (click)="slickModal.slickGoTo(0)">Top Fundraisers</button>
+        <button class="btn" role="button" [class.active]="slidecount === 1" (click)="slickModal.slickGoTo(1)">Top Teams</button>
+        <button class="btn" role="button" [class.active]="slidecount === 2" (click)="slickModal.slickGoTo(2)">Top Donors</button>
+        <button class="btn" role="button" [class.active]="slidecount === 3" (click)="slickModal.slickGoTo(3)">Top Cities</button>
       </div>
     </div>
   </div>
@@ -23,18 +23,24 @@
         (init)="slickInit($event)"
         (breakpoint)="breakpoint($event)"
         (afterChange)="afterChange($event)"
-        (beforeChange)="beforeChange($event)">
-        <div ngxSlickItem class="slide">
+        (beforeChange)="beforeChange($event)"
+        role="region">
+        <div ngxSlickItem class="slide" role="group" tabindex="0">
           <h2>Top Fundraisers</h2>
+          <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>Aliquam scelerisque enim nec leo mollis, in placerat augue hendrerit. Nulla ornare velit vitae efficitur varius. In id ultrices risus. Duis et odio enim. Integer consectetur est non placerat volutpat. Ut pulvinar purus diam, non auctor purus tincidunt non. Praesent vitae sollicitudin dui. Ut a congue ligula. Nullam volutpat efficitur magna. Duis vitae augue metus. In laoreet tristique erat, non tincidunt dui condimentum at. Duis sollicitudin ornare elit nec tincidunt. Donec placerat luctus tortor, ornare tincidunt neque maximus at. Aenean vulputate lobortis viverra. Nam vitae consequat leo. Nulla vitae tempus nisi.</p>
         </div>
-        <div ngxSlickItem class="slide">
+        <div ngxSlickItem class="slide" role="group" tabindex="0">
           <h2>Top Teams</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<b>Aliquam scelerisque enim nec leo mollis, in placerat augue hendrerit.</b>  Nulla ornare velit vitae efficitur varius. In id ultrices risus. Duis et odio enim. Integer consectetur est non placerat volutpat. Ut pulvinar purus diam, non auctor purus tincidunt non. Praesent vitae sollicitudin dui. Ut a congue ligula. Nullam volutpat efficitur magna. Duis vitae augue metus. In laoreet tristique erat, non tincidunt dui condimentum at. Duis sollicitudin ornare elit nec tincidunt. Donec placerat luctus tortor, ornare tincidunt neque maximus at. Aenean vulputate lobortis viverra. Nam vitae consequat leo. Nulla vitae tempus nisi.</p>
         </div>
-        <div ngxSlickItem class="slide">
+        <div ngxSlickItem class="slide" role="group" tabindex="0">
           <h2>Top Donors</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque enim nec leo mollis, in placerat augue hendrerit. Nulla ornare velit vitae efficitur varius. In id ultrices risus. Duis et odio enim. Integer consectetur est non placerat volutpat. Ut pulvinar purus diam, non auctor purus tincidunt non. Praesent vitae sollicitudin dui. Ut a congue ligula. Nullam volutpat efficitur magna. Duis vitae augue metus. In laoreet tristique erat, non tincidunt dui condimentum at. Duis sollicitudin ornare elit nec tincidunt. Donec placerat luctus tortor, ornare tincidunt neque maximus at. Aenean vulputate lobortis viverra. Nam vitae consequat leo. Nulla vitae tempus nisi.</p>
         </div>
-        <div ngxSlickItem class="slide">
+        <div ngxSlickItem class="slide" role="group" tabindex="0">
           <h2>Top Cities</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque enim nec leo mollis, in placerat augue hendrerit. Nulla ornare velit vitae efficitur varius. In id ultrices risus. Duis et odio enim. Integer consectetur est non placerat volutpat. Ut pulvinar purus diam, non auctor purus tincidunt non. Praesent vitae sollicitudin dui. Ut a congue ligula. Nullam volutpat efficitur magna. Duis vitae augue metus. In laoreet tristique erat, non tincidunt dui condimentum at. Duis sollicitudin ornare elit nec tincidunt. Donec placerat luctus tortor, ornare tincidunt neque maximus at. Aenean vulputate lobortis viverra. Nam vitae consequat leo. Nulla vitae tempus nisi.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque enim nec leo mollis, in placerat augue hendrerit. Nulla ornare velit vitae efficitur varius. In id ultrices risus. Duis et odio enim. Integer consectetur est non placerat volutpat. Ut pulvinar purus diam, non auctor purus tincidunt non. Praesent vitae sollicitudin dui. Ut a congue ligula. Nullam volutpat efficitur magna. Duis vitae augue metus. In laoreet tristique erat, non tincidunt dui condimentum at. Duis sollicitudin ornare elit nec tincidunt. Donec placerat luctus tortor, ornare tincidunt neque maximus at. Aenean vulputate lobortis viverra. Nam vitae consequat leo. Nulla vitae tempus nisi.</p>
         </div>
       </ngx-slick-carousel>
     </div>

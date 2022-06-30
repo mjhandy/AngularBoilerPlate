@@ -18,10 +18,12 @@ $button-color: #db3a00;
 
 .slick {
   &-buttons {
-    display: flex;
+    display: none;
     flex-flow: row;
     justify-content: center;
-
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
     .btn {
       flex-grow: 1;
       background-color: transparent;
@@ -35,12 +37,10 @@ $button-color: #db3a00;
       font-size: 19px;
       font-weight: 700;
       line-height: 1;
-
       &:not(:first-child),
       &:not(:last-child) {
         border-right: $button-border-width-desktop solid $button-color;
       }
-
       &:first-child {
         border-left-color: $button-color;
         border-left-width: $button-border-width-desktop;
@@ -54,7 +54,41 @@ $button-color: #db3a00;
         border-top-right-radius: $button-border-radius;
         border-bottom-right-radius: $button-border-radius;
       }
+      &:hover,
+      &.active{
+        background-color: $button-color;
+        color: $white;
+      }
 
     }
+  }
+  // arrows
+  &-arrow{
+    border-color: $button-color;
+    @include media-breakpoint-up(lg) {
+      opacity: 0;
+      visibility: 0;
+    }
+    &:before{
+      color: transparent;
+    }
+  }
+  &-next{
+    border-right: $button-border-width-desktop solid; 
+    border-bottom: $button-border-width-desktop solid;
+    border-color: $button-color; 
+    transform: rotate(-45deg);
+    right: 0;
+  }
+  &-prev{
+    border-left: $button-border-width-desktop solid; 
+    border-top: $button-border-width-desktop solid;
+    border-color: $button-color;
+    transform: rotate(-45deg);
+    left: 0;
+  }
+  // slide container
+  &-slide{
+    padding: 20px 40px;
   }
 }
