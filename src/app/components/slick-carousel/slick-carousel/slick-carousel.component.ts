@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { $ } from 'protractor';
+import { Component, OnInit, ElementRef, ViewEncapsulation } from '@angular/core';
+
 
 @Component({
   selector: 'app-slick-carousel',
@@ -14,17 +14,20 @@ export class SlickCarouselComponent implements OnInit {
   slidecount = 0;
   activeSlide: string;
   document: any;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
   slides = [
     {title: "Top Fundraisers"},
     {title: "Top Teams"},
     {title: "Top Donors"},
     {title: "Top Cities"}
-  ];  
+  ]; 
+
+  constructor(
+    elementRef: ElementRef
+  ) { }
+
+  ngOnInit(): void {
+  }
+ 
   slideConfig = {
     slidesToShow: 1, 
     slidesToScroll: 1,
@@ -33,6 +36,10 @@ export class SlickCarouselComponent implements OnInit {
     fade: true,
     dots: true,
     appendDots: '.leaderboard-dots',
+    customPaging: function(slider, i, slides) {      
+      let title = document.getElementsByClassName('slide')[i].getAttribute('data-title');
+      return '<button class="btn custom-slick-dots" id=leaderBoardDot-' + i + ">" + title +  "</button>";
+    },
     prevArrow:
       '<button type="button" class="slick-arrow slick-prev" aria-label="Previous" aria-hidden="true"></button>',
     nextArrow:
@@ -41,9 +48,7 @@ export class SlickCarouselComponent implements OnInit {
   };
 
   slickInit(e) {
-    console.log('slick initialized');
-    this.activeSlide = this.document.getElelmentsByClassName('active-slide')[0];
-    
+    console.log('slick initialized');    
   }
   
   breakpoint(e) {
@@ -54,10 +59,6 @@ export class SlickCarouselComponent implements OnInit {
     console.log('afterChange', e, e.currentSlide);
     this.slidecount = e.currentSlide;
     console.log('Current Slide: ', this.slidecount);
-    // give the current slide focus
-    this.activeSlide = this.document.getElelmentsByClassName('slide-active')[0];
-    
-
   }
   
   beforeChange(e) {

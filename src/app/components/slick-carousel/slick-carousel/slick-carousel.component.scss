@@ -9,7 +9,7 @@
 @import "./../../../../scss/basicBoostrapIncludes";
 // slick scss
 @import "~slick-carousel/slick/slick";
-@import "~slick-carousel/slick/slick-theme";
+// @import "~slick-carousel/slick/slick-theme";
 // variables
 $button-border-width-mobile: 1px;
 $button-border-width-desktop: 2px;
@@ -17,78 +17,102 @@ $button-border-radius: 20px;
 $button-color: #db3a00;
 
 .slick {
-  &-buttons {
-    display: none;
-    flex-flow: row;
-    justify-content: center;
-    @include media-breakpoint-up(lg) {
-      display: flex;
-    }
-    .btn {
+
+  // dots{
+  &-dots {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 0;
+    list-style: none;
+
+    li {
       flex-grow: 1;
-      background-color: transparent;
-      color: $black;
-      border-top: $button-border-width-desktop solid $button-color;
-      border-bottom: $button-border-width-desktop solid $button-color;
-      border-left-width: 0;
-      border-right: 0;
-      padding: 10px 10px;
-      transition: all 500ms ease-in-out;
-      font-size: 19px;
-      font-weight: 700;
-      line-height: 1;
+
+      .btn {
+        width: 100%;
+        background-color: transparent;
+        color: $black;
+        border-top: $button-border-width-desktop solid $button-color;
+        border-bottom: $button-border-width-desktop solid $button-color;
+        border-left-width: 0;
+        border-right: 0;
+        padding: 10px 10px;
+        transition: all 500ms ease-in-out;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1;
+
+        &:before {
+          display: none;
+        }
+
+        &[aria-selected='true'] {
+          background-color: $button-color;
+          color: $white;
+        }
+      }
+
       &:not(:first-child),
       &:not(:last-child) {
-        border-right: $button-border-width-desktop solid $button-color;
+        .btn {
+          border-right: $button-border-width-desktop solid $button-color;
+        }
       }
+
       &:first-child {
-        border-left-color: $button-color;
-        border-left-width: $button-border-width-desktop;
-        border-top-left-radius: $button-border-radius;
-        border-bottom-left-radius: $button-border-radius;
+        .btn {
+          border-left-color: $button-color;
+          border-left-width: $button-border-width-desktop;
+          border-top-left-radius: $button-border-radius;
+          border-bottom-left-radius: $button-border-radius;
+        }
       }
 
       &:last-child {
-        border-right-color: $button-color;
-        border-right-width: $button-border-width-desktop;
-        border-top-right-radius: $button-border-radius;
-        border-bottom-right-radius: $button-border-radius;
+        .btn {
+          &:last-child {
+            border-right-color: $button-color;
+            border-right-width: $button-border-width-desktop;
+            border-top-right-radius: $button-border-radius;
+            border-bottom-right-radius: $button-border-radius;
+          }
+        }
       }
-      &:hover,
-      &.active{
-        background-color: $button-color;
-        color: $white;
-      }
-
     }
   }
+
   // arrows
-  &-arrow{
-    border-color: $button-color;
-    @include media-breakpoint-up(lg) {
-      opacity: 0;
-      visibility: 0;
-    }
-    &:before{
+  &-arrow {
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    &:before {
       color: transparent;
     }
   }
-  &-next{
-    border-right: $button-border-width-desktop solid; 
+
+  &-next {
+    border-right: $button-border-width-desktop solid;
     border-bottom: $button-border-width-desktop solid;
-    border-color: $button-color; 
+    border-color: $button-color;
     transform: rotate(-45deg);
     right: 0;
   }
-  &-prev{
-    border-left: $button-border-width-desktop solid; 
+
+  &-prev {
+    border-left: $button-border-width-desktop solid;
     border-top: $button-border-width-desktop solid;
     border-color: $button-color;
     transform: rotate(-45deg);
     left: 0;
   }
+
   // slide container
-  &-slide{
+  &-slide {
     padding: 20px 40px;
   }
 }
