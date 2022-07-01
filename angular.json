@@ -28,8 +28,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.scss"
-
+              "./node_modules/bootstrap-icons/font/bootstrap-icons.scss"
             ],
             "scripts": [              
               "node_modules/jquery/dist/jquery.min.js",
