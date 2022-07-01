@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-slick-carousel',
@@ -18,12 +19,20 @@ export class SlickCarouselComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  slides = [
+    {title: "Top Fundraisers"},
+    {title: "Top Teams"},
+    {title: "Top Donors"},
+    {title: "Top Cities"}
+  ];  
   slideConfig = {
     slidesToShow: 1, 
     slidesToScroll: 1,
     adaptiveHeight: true,
     speed: 250,
     fade: true,
+    dots: true,
+    appendDots: '.leaderboard-dots',
     prevArrow:
       '<button type="button" class="slick-arrow slick-prev" aria-label="Previous" aria-hidden="true"></button>',
     nextArrow:
