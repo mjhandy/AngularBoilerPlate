@@ -20,10 +20,13 @@ $button-color: #db3a00;
 
   // dots{
   &-dots {
-    display: flex;
+    display: none;
     flex-direction: row;
     margin: 0 0 0 0;
     list-style: none;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
 
     li {
       flex-grow: 1;
@@ -92,6 +95,9 @@ $button-color: #db3a00;
     outline: none;
     &:before {
       color: transparent;
+    }
+    @include media-breakpoint-up(lg) {
+      display: none !important; // we need the important to override the inline display inject my slick
     }
   }
 
