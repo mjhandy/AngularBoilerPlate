@@ -15,7 +15,9 @@ export class SlickCarouselComponent   {
   activeSlide: string;
   document: any;
   slides = [
-    {title: "Top Fundraisers"},
+    {
+      title: "Top Fundraisers"
+    } ,
     {title: "Top Teams"},
     {title: "Top Donors"},
     {title: "Top Cities"}

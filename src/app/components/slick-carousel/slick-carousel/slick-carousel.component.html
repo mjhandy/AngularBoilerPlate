@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="--primary: red">
   <div class="row title">
     <div class="col-12">
       <h1>Slick Carousel Leaderboard</h1>
@@ -21,8 +21,8 @@
         (beforeChange)="beforeChange($event)"
         role="region">
         <div ngxSlickItem *ngFor="let slide of slides" class="slide" attr.data-title="{{ slide.title }}">
-          <app-with-thumbnail ></app-with-thumbnail>
           <h2>{{ slide.title }}</h2>
+          <app-with-thumbnail></app-with-thumbnail>
           <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>Aliquam scelerisque enim nec leo mollis, in placerat augue hendrerit. Nulla ornare velit vitae efficitur varius. In id ultrices risus. Duis et odio enim. Integer consectetur est non placerat volutpat. Ut pulvinar purus diam, non auctor purus tincidunt non. Praesent vitae sollicitudin dui. Ut a congue ligula. Nullam volutpat efficitur magna. Duis vitae augue metus. In laoreet tristique erat, non tincidunt dui condimentum at. Duis sollicitudin ornare elit nec tincidunt. Donec placerat luctus tortor, ornare tincidunt neque maximus at. Aenean vulputate lobortis viverra. Nam vitae consequat leo. Nulla vitae tempus nisi.</p>          
         </div>
       </ngx-slick-carousel>
