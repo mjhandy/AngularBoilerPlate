@@ -1,0 +1,69 @@
+/// Base scoreboard
+///
+/// @author Mark Handy
+/// @name Base scoreboards
+/// @group component
+///
+
+// required includes
+@import "./../../../../scss/basicBoostrapIncludes";
+
+
+.scoreboard {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: list-number;
+
+  .item {
+    counter-increment: list-number;
+
+    &:nth-of-type(odd) {
+      background-color: $rowBGColour;
+    }
+
+    a {
+      display: flex;
+      flex-flow: row nowrap;
+      text-decoration: none;
+      justify-content: space-between;
+      position: relative;
+      align-items: center;
+      padding: 10px;
+      &:hover {
+        text-decoration: none;
+      }
+      &:before {
+        position: absolute;
+        content: counter(list-number);
+        background-color: $white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 30%;
+        left: 5px;
+      }
+      &:after{
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 2px solid;
+        border-bottom: 2px solid;
+        border-color: red;
+        transform: rotate(-45deg);
+      }
+      .name{
+        flex-grow: 1;
+      }
+      .amount{
+        
+      }
+    }
+  }
+}

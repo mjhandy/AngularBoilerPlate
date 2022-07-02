@@ -17,6 +17,8 @@ import { TabsComponent } from './components/material/tabs/tabs.component';
 import { MaterialDesignModule } from './components/material-design/material-design.module';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SlickCarouselComponent } from './components/slick-carousel/slick-carousel/slick-carousel.component';
+import { WithThumbnailComponent } from './components/scoreboards/with-thumbnail/with-thumbnail.component';
+import { WithoutThumbnailComponent } from './components/scoreboards/without-thumbnail/without-thumbnail.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { SlickCarouselComponent } from './components/slick-carousel/slick-carous
     ResponsiveTable,
     TabsComponent,
     SlickCarouselComponent,
+    WithThumbnailComponent,
+    WithoutThumbnailComponent,
   ],
   imports: [
     BrowserModule,
