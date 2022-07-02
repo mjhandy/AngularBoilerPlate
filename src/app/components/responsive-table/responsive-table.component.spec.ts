@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ResponsiveTableComponent } from './responsive-table.component';
+import { ResponsiveTable } from './responsive-table.component';
 
 describe('ResponsiveTableComponent', () => {
-  let component: ResponsiveTableComponent;
-  let fixture: ComponentFixture<ResponsiveTableComponent>;
+  let component: ResponsiveTable;
+  let fixture: ComponentFixture<ResponsiveTable>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ResponsiveTableComponent ]
+      declarations: [ ResponsiveTable ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ResponsiveTableComponent);
+    fixture = TestBed.createComponent(ResponsiveTable);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

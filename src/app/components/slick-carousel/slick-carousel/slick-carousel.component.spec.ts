@@ -19,7 +19,35 @@ describe('SlickCarouselComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  // it('should create', () => {
+  //   expect(component).toBeTruthy();
+  // });
+    
+  // new test by ngentest
+  // it('should run #slickInit()', async () => {
+    
+  //   component.slickInit({});
+    
+  // });
+    
+  // new test by ngentest
+  // it('should run #breakpoint()', async () => {
+    
+  //   component.breakpoint({});
+    
+  // });
+    
+  // new test by ngentest
+  // it('should run #afterChange()', async () => {
+    
+  //   component.afterChange({});
+    
+  // });
+    
+  // new test by ngentest
+  // it('should run #beforeChange()', async () => {
+    
+  //   component.beforeChange({});
+    
+  // });
 });

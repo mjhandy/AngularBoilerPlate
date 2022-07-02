@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, ViewEncapsulation } from '@angular/core';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, OnInit, ElementRef, ViewEncapsulation } from '@angular/core'
   ],
   encapsulation: ViewEncapsulation.None
 })
-export class SlickCarouselComponent implements OnInit {
+export class SlickCarouselComponent   {
 
   slidecount = 0;
   activeSlide: string;
@@ -25,9 +25,7 @@ export class SlickCarouselComponent implements OnInit {
     elementRef: ElementRef
   ) { }
 
-  ngOnInit(): void {
-  }
- 
+
   slideConfig = {
     slidesToShow: 1, 
     slidesToScroll: 1,
@@ -56,9 +54,7 @@ export class SlickCarouselComponent implements OnInit {
   }
   
   afterChange(e) {
-    console.log('afterChange', e, e.currentSlide);
-    this.slidecount = e.currentSlide;
-    console.log('Current Slide: ', this.slidecount);
+    console.log('afterChange');
   }
   
   beforeChange(e) {
