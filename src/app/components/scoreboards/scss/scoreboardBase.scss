@@ -10,52 +10,72 @@
 
 $primary: var(--primary);
 
-
 .scoreboard {
   list-style: none;
   margin: 0;
   padding: 0;
   counter-reset: list-number;
-  
 
   .item {
     counter-increment: list-number;
     transition: all 200ms ease-in-out;
-    &:nth-of-type(odd) {
-      background-color: $rowBGColour;
+    &:nth-of-type(even) {
+      background-color: #f7f7f7;
+    }
+    @include media-breakpoint-up(md) {
+      &:nth-of-type(odd) {
+        background-color: #f7f7f7;
+      }
+      &:nth-of-type(even) {
+        background-color: transparent;
+      }
     }
     a {
       display: flex;
       flex-flow: row nowrap;
       text-decoration: none;
-      justify-content: space-between;
       position: relative;
       align-items: center;
       padding: 10px;
-      color: var(--primary);
       &:hover {
         text-decoration: none;
       }
       &:before {
-        position: absolute;
         content: counter(list-number);
-        background-color: $white;
         border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 15px;
-        left: 5px;
+        font-weight: 700;
       }
-      .name{
+      .nameCityAmount{
+        display: flex;
+        flex-flow: column;
+        flex-grow: 1;
+        @include media-breakpoint-up(md) {
+          flex-flow: row;
+          align-items: center;
+        }
+      }
+      .name {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
         flex-grow: 1;
       }
-      .amount{
-        
+      .city {
+        color: #535353;
+        margin-right: 30px;        
+        @include media-breakpoint-up(md) {
+          text-align: right;
+        }
       }
-      .arrow{
+      .amount {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+        color: $primary;
+        margin-right: 20px;
+      }
+
+      .arrow {
         display: block;
         width: 10px;
         height: 10px;
@@ -63,9 +83,37 @@ $primary: var(--primary);
         border-left: 0;
         border-right: 2px solid;
         border-bottom: 2px solid;
-        border-color: $primary;
+        border-color: $black;
         transform: rotate(-45deg);
       }
+    }
+    &:first-child {
+      a {
+        &:before {
+          @include media-breakpoint-up(md) {
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            background-color: $white;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+    &:hover{
+      background-color: $primary;
+      .name,
+      .city,
+      .amount{
+        color: $white;
+      }
+      // a{
+      //   &:before{
+      //     color: $white;
+      //   }
+      // }
     }
   }
 }

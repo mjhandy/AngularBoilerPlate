@@ -1,46 +1,98 @@
 /// Scoreboard with thumbnail
 ///
 /// @author Mark Handy
-/// @name Base scoreboards
+/// @name Scoreboard with thumbnail
 /// @group component
 ///
 
 // required includes
 @import "./../../../../scss/basicBoostrapIncludes";
 
-.scoreboard{
-  &-thumbnail{
-    .item{
-      flex-grow: 2;
-      .thumbnail{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 75px;
-        img{
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          margin: 0;
+.scoreboard {
+  &-thumbnail {
+    .item {
+      a {
+        &:before {
+          @include media-breakpoint-up(md) {
+            margin: 0 23px 0 40px;
+          }
+        }
+        .thumbnail {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 10px;
+          @include media-breakpoint-up(md) {
+            margin: 0 20px 0 0;
+          }
+          img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            margin: 0;
+          }
         }
       }
 
-      &:first-child{
-        a{
-          padding-top: 20px;
-          padding-bottom: 20px;
-          &:before{
-            left: 20px;
-          }
-          .thumbnail{
-            img{
-              width: 64px;
-              height: 64px;
-              border-radius: 50%;
+      &:first-child {
+        a {
+          &:before {
+            @include media-breakpoint-up(md) {
+              position: absolute;
+              top: 10px;
+              left: 50px;
+              margin: 0;
             }
           }
+          .thumbnail {
+            @include media-breakpoint-up(md) {
+              margin: 0 15px 0 30px;
+            }
+            img {
+              border-radius: 50%;
+              @include media-breakpoint-up(md) {
+                width: 86px;
+                height: 86px;
+              }
+            }
+          }
+          .nameCityAmount {
+            @include media-breakpoint-up(md) {
+              flex-flow: column ;
+              align-items: flex-start;
+              position: relative;
+            }
+            .name {
+              font-weight: 700;
+              line-height: 1;
+              @include media-breakpoint-up(md) {
+                font-size: 25px;   
+                width: 66.66%    
+              }
+            }
+            .city {
+              font-size: 18px;
+              font-weight: 300;
+              @include media-breakpoint-up(md) {
+                width: 66.66%;
+                text-align: unset;
+                margin: 0;
+              }
+            }
+            .amount{
+              @include media-breakpoint-up(md){
+                width: 33.33%;
+                position: absolute;
+                right: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                
+              }
+            }            
+          }
         }
-
       }
     }
   }
