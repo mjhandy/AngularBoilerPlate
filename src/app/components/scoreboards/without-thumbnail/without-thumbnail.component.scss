@@ -14,7 +14,7 @@
     .item{
       a{
         .counter{
-          margin: 0 30px 0 20px;
+          margin: 0 15px 0 0;
           @include media-breakpoint-up(md){
             margin: 0 25px;
           }
@@ -28,15 +28,19 @@
       }
       &:first-child{
         a{
-          .counter{
-            margin: 0 20px 0 15px;
-            font-size: 25px;
-            font-weight: 700;
-          }
-          .nameCityAmount{
-            .name{
+          .counter{            
+            @include media-breakpoint-up(md){
               font-size: 25px;
               font-weight: 700;
+              margin: 0 20px 0 15px;
+            }            
+          }
+          .nameCityAmount{
+            .name{              
+              font-weight: 700;
+              @include media-breakpoint-up(md){
+                font-size: 25px;
+              }
             }
           }
         }
