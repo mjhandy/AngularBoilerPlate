@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, ElementRef, ViewEncapsulation } from '@angular/core';
   ],
   encapsulation: ViewEncapsulation.None
 })
-export class SlickCarouselComponent   {
+export class SlickCarouselComponent {
 
   slidecount = 0;
   activeSlide: string;
@@ -17,19 +17,17 @@ export class SlickCarouselComponent   {
   slides = [
     {
       title: "Top Fundraisers"
-    } ,
-    {title: "Top Teams"},
-    {title: "Top Donors"},
-    {title: "Top Cities"}
-  ]; 
+    },
+    { title: "Top Teams" },
+    { title: "Top Donors" },
+    { title: "Top Cities" }
+  ];
 
-  constructor(
-    elementRef: ElementRef
-  ) { }
+  constructor() { }
 
 
   slideConfig = {
-    slidesToShow: 1, 
+    slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
     speed: 250,
@@ -37,9 +35,9 @@ export class SlickCarouselComponent   {
     dots: true,
     arrow: true,
     appendDots: '.leaderboard-dots',
-    customPaging: function(slider, i, slides) {      
+    customPaging: function (slider, i, slides) {      
       let title = document.getElementsByClassName('slide')[i].getAttribute('data-title');
-      return '<button class="btn custom-slick-dots" id=leaderBoardDot-' + i + ">" + title +  "</button>";
+      return '<button class="btn custom-slick-dots" id=leaderBoardDot-' + i + ">" + title + "</button>";
     },
     prevArrow:
       '<button type="button" class="slick-arrow slick-prev" aria-label="Previous" aria-hidden="true"></button>',
@@ -49,17 +47,17 @@ export class SlickCarouselComponent   {
   };
 
   slickInit(e) {
-    console.log('slick initialized');    
+    console.log('slick initialized');
   }
-  
+
   breakpoint(e) {
     console.log('breakpoint');
   }
-  
+
   afterChange(e) {
     console.log('afterChange');
   }
-  
+
   beforeChange(e) {
     console.log('beforeChange', e);
   }
