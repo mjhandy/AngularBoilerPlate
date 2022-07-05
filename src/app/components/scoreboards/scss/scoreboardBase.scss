@@ -37,6 +37,7 @@ $primary: var(--primary);
       position: relative;
       align-items: center;
       padding: 10px;
+      color: #2B3A53;
       &:hover {
         text-decoration: none;
       }
@@ -75,7 +76,7 @@ $primary: var(--primary);
         margin-right: 20px;
       }
 
-      .arrow {
+      .chevron {
         display: block;
         width: 10px;
         height: 10px;
@@ -83,7 +84,7 @@ $primary: var(--primary);
         border-left: 0;
         border-right: 2px solid;
         border-bottom: 2px solid;
-        border-color: $black;
+        border-color: #375999;
         transform: rotate(-45deg);
       }
     }
@@ -101,6 +102,13 @@ $primary: var(--primary);
           }
         }
       }
+      &:hover{
+        a{
+          &:before{
+            color: #2B3A53;
+          }
+        }
+      }
     }
     &:hover{
       background-color: $primary;
@@ -109,11 +117,11 @@ $primary: var(--primary);
       .amount{
         color: $white;
       }
-      // a{
-      //   &:before{
-      //     color: $white;
-      //   }
-      // }
+      a{
+        &:before{
+          color: $white;
+        }
+      }
     }
   }
 }
