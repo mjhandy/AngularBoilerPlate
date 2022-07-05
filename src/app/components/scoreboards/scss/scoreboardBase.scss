@@ -41,11 +41,20 @@ $primary: var(--primary);
       &:hover {
         text-decoration: none;
       }
-      &:before {
-        content: counter(list-number);
+      .counter{
         border-radius: 50%;
-        font-weight: 700;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        &:before {
+          content: counter(list-number);
+          
+          font-weight: 700;
+        }
       }
+
       .nameCityAmount{
         display: flex;
         flex-flow: column;
@@ -90,21 +99,24 @@ $primary: var(--primary);
     }
     &:first-child {
       a {
-        &:before {
-          @include media-breakpoint-up(md) {
-            justify-content: center;
-            align-items: center;
-            width: 35px;
-            height: 35px;
-            background-color: $white;
-            display: flex;
-            align-items: center;
+        .counter{
+          &:before {
+            @include media-breakpoint-up(md) {
+              justify-content: center;
+              align-items: center;
+              width: 35px;
+              height: 35px;
+              background-color: $white;
+              display: flex;
+              align-items: center;
+            }
           }
         }
+
       }
       &:hover{
         a{
-          &:before{
+          .counter{
             color: #2B3A53;
           }
         }
