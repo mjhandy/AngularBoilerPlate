@@ -48,10 +48,18 @@ $button-color: #db3a00;
         &:before {
           display: none;
         }
+        &:hover{
+          background-color: $button-color;
+          color: $white;
+        }
 
         &[aria-selected='true'] {
           background-color: $button-color;
           color: $white;
+          &:hover{
+            background-color: $white;
+            color: $black;
+          }
         }
       }
 
