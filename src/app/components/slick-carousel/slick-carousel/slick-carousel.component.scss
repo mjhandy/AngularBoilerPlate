@@ -24,7 +24,7 @@ $button-color: #db3a00;
     flex-direction: row;
     margin: 0 0 0 0;
     list-style: none;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
       display: flex;
     }
 
@@ -96,7 +96,7 @@ $button-color: #db3a00;
     &:before {
       color: transparent;
     }
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       display: none !important; // we need the important to override the inline display inject my slick
     }
   }

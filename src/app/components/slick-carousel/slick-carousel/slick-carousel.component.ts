@@ -35,6 +35,7 @@ export class SlickCarouselComponent   {
     speed: 250,
     fade: true,
     dots: true,
+    arrow: true,
     appendDots: '.leaderboard-dots',
     customPaging: function(slider, i, slides) {      
       let title = document.getElementsByClassName('slide')[i].getAttribute('data-title');
