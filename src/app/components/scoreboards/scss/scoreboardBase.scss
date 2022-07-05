@@ -37,25 +37,25 @@ $primary: var(--primary);
       position: relative;
       align-items: center;
       padding: 10px;
-      color: #2B3A53;
+      color: #2b3a53;
       &:hover {
         text-decoration: none;
       }
-      .counter{
+      .counter {
         border-radius: 50%;
         display: flex;
         align-items: flex-end;
         justify-content: center;
         width: 20px;
         height: 20px;
+        font-weight: 700;
+        color: inherit;
         &:before {
           content: counter(list-number);
-          
-          font-weight: 700;
         }
       }
 
-      .nameCityAmount{
+      .nameCityAmount {
         display: flex;
         flex-flow: column;
         flex-grow: 1;
@@ -63,26 +63,26 @@ $primary: var(--primary);
           flex-flow: row;
           align-items: center;
         }
-      }
-      .name {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.2;
-        flex-grow: 1;
-      }
-      .city {
-        color: #535353;
-        margin-right: 30px;        
-        @include media-breakpoint-up(md) {
-          text-align: right;
+        .name {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 1.2;
+          flex-grow: 1;
         }
-      }
-      .amount {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1;
-        color: $primary;
-        margin-right: 20px;
+        .city {
+          color: #535353;
+          margin-right: 30px;
+          @include media-breakpoint-up(md) {
+            text-align: right;
+          }
+        }
+        .amount {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 1;
+          color: $primary;
+          margin-right: 20px;
+        }
       }
 
       .chevron {
@@ -99,40 +99,37 @@ $primary: var(--primary);
     }
     &:first-child {
       a {
-        .counter{
-          &:before {
-            @include media-breakpoint-up(md) {
-              justify-content: center;
-              align-items: center;
-              width: 35px;
-              height: 35px;
-              background-color: $white;
-              display: flex;
-              align-items: center;
-            }
+        .counter {
+          @include media-breakpoint-up(md) {
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            background-color: $white;
+            display: flex;
+            align-items: center;
           }
         }
-
       }
-      &:hover{
-        a{
-          .counter{
-            color: #2B3A53;
+      &:hover {
+        a {
+          .counter {
+            color: #2b3a53;
           }
         }
       }
     }
-    &:hover{
+    &:hover {
       background-color: $primary;
-      .name,
-      .city,
-      .amount{
-        color: $white;
-      }
-      a{
-        &:before{
+      .nameCityAmount{
+        .name,
+        .city,
+        .amount{
           color: $white;
         }
+      }
+      .counter {
+        color: $white;
       }
     }
   }
