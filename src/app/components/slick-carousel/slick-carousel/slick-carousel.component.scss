@@ -23,6 +23,7 @@ $button-color: #db3a00;
     display: none;
     flex-direction: row;
     margin: 0 0 0 0;
+    padding: 0;
     list-style: none;
     @include media-breakpoint-up(sm) {
       display: flex;
