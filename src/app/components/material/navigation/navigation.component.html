@@ -1,0 +1,23 @@
+<nav mat-menu class="menu">
+  <div class="menu-group"> 
+    <a href="#" mat-menu-item class="menu-item">Menu Item</a>
+  </div>
+  <div class="menu-grou">
+    <button mat-button [mat-menu-trigger-for]="g2" class="menu-button">Drop Down</button>
+    <mat-menu #g2="matMenu">
+      <a href="#" mat-menu-item>Menu Item</a>
+      <a href="#" mat-menu-item>Menu Item</a>
+      <a href="#" mat-menu-item>Menu Item</a>
+      <a href="#" mat-menu-item>Menu Item</a>
+    </mat-menu>
+  </div>
+  <div class="menu-group"> 
+    <a href="#" mat-menu-item class="menu-item">Menu Item</a>
+  </div>
+  <div class="menu-group"> 
+    <a href="#" mat-menu-item class="menu-item">Menu Item</a>
+  </div>
+  <div class="menu-group"> 
+    <a href="#" mat-menu-item class="menu-item">Menu Item</a>
+  </div>
+</nav>

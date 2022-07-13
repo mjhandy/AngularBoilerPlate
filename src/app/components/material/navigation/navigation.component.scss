@@ -1,0 +1,15 @@
+.menu{
+  display: flex;
+  flex-flow: row nowrap;
+  &-item,
+  &-button{
+    height: unset;
+    padding: 10px 5px;
+    line-height: 1;
+    font-weight: 700;
+    border-radius: 0;
+    &:focus{
+      outline: 2px solid red;
+    }
+  }
+}
