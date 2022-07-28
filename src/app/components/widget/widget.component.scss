@@ -6,10 +6,8 @@
 ///
 
 // required includes
-@import '/src/scss/basicBoostrapIncludes';
+@import '../../../scss/basicBoostrapIncludes';
 
-// SCSS Imports
-@import '/src/scss/mixins';
 
 .widget{
   display: flex;
@@ -20,7 +18,7 @@
     padding: 5px 10px;
     h3{
       margin: 0;
-      @include font-size(16px, 1, 700);
+      @include fontSize(16px, 1, 700);
     }
   }
   &-body{
