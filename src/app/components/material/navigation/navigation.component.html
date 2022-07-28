@@ -1,0 +1,35 @@
+
+<mat-menu #main="matMenu" role="navigation" class="menu">
+  <div class="menu-group"> 
+    <a href="#" mat-menu-item class="menu-item">Menu Item</a>
+  </div>
+  <div class="menu-group">
+    <button mat-button [mat-menu-trigger-for]="g2" class="menu-button">Drop Down</button>
+    <mat-menu #g2="matMenu">
+      <a href="#" mat-menu-item class="menu-item">Menu Item</a>
+      <a href="#" mat-menu-item class="menu-item">Menu Item</a>
+      <a href="#" mat-menu-item class="menu-item">Menu Item</a>
+      <a href="#" mat-menu-item class="menu-item">Menu Item</a>
+    </mat-menu>
+  </div>
+  <div class="menu-group"> 
+    <a href="#" mat-menu-item class="menu-item">Menu Item</a>
+  </div>
+  <div class="menu-group"> 
+    <a routerLink="material-tabs" mat-menu-item class="menu-item">Material Tabs</a>
+  </div>
+  <div class="menu-group">
+    <a mat-button [mat-menu-trigger-for]="g2" class="menu-button" routerLink="basic-accordion"
+    routerLinkActive="active" >Drop Down</a>
+    <mat-menu #g2="matMenu">
+      <a href="#" mat-menu-item>Menu Item</a>
+      <a href="#" mat-menu-item>Menu Item</a>
+      <a href="#" mat-menu-item>Menu Item</a>
+      <a href="#" mat-menu-item>Menu Item</a>
+    </mat-menu>
+  </div>
+  <div class="menu-group"> 
+    <a routerLink="slick-carousel" mat-menu-item class="menu-item">Slick Carousel</a>
+  </div>
+</mat-menu>
+<button class="menu-toggle">X</button>

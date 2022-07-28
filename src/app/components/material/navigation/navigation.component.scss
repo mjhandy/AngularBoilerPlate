@@ -1,0 +1,36 @@
+/// Main Navigation with theme support
+///
+/// @author Mark Handy
+/// @name Material Navigation
+/// @group component
+///
+
+// required includes
+@import './../../../../scss/basicBoostrapIncludes';
+
+.mat{
+  &-menu{
+    &-panel{
+      border-radius: 0;
+    }
+  }
+}
+
+.menu{
+  display: flex;
+  flex-flow: row nowrap;
+  &-item,
+  &-button{
+    height: unset;
+    padding: 10px 5px;
+    border-radius: 0;
+    @include fontSize(18px, 1.0, 400, normal);
+    &:focus{
+      outline: 2px solid red;
+    }
+    
+  }
+  &-toggle{
+    display: none;
+  }
+}

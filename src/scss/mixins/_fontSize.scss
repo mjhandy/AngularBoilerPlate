@@ -24,7 +24,7 @@
 /// }
 
 
-@mixin font-size($size: $fontSize, $height: $lineHeight, $weight: 400, $letterSpacing: normal) {
+@mixin fontSize($size: $fontSize, $height: $lineHeight, $weight: 400, $letterSpacing: normal) {
   // font size
   @if str-index(to-string($size), '%') !=null or str-index(to-string($size), 'px') !=null or str-index(to-string($size), 'rem') !=null {
     font-size: $size;

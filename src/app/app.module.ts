@@ -19,6 +19,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SlickCarouselComponent } from './components/slick-carousel/slick-carousel/slick-carousel.component';
 import { WithThumbnailComponent } from './components/scoreboards/with-thumbnail/with-thumbnail.component';
 import { WithoutThumbnailComponent } from './components/scoreboards/without-thumbnail/without-thumbnail.component';
+import { NavigationComponent } from './components/material/navigation/navigation.component';
+
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import { WithoutThumbnailComponent } from './components/scoreboards/without-thum
     SlickCarouselComponent,
     WithThumbnailComponent,
     WithoutThumbnailComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
